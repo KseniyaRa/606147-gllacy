@@ -15,7 +15,7 @@
                             <a href="#">Каталог</a>
                             <ul class="site-navigation-cataloge">
                                 <li><a href="#"></a>Новинки</li>
-                                <li><a href="#"></a>Сливочное</li>
+                                <li><a href="catalog.html"></a>Сливочное</li>
                                 <li><a href="#"></a>Щербеты</li>
                                 <li><a href="#"></a>Фруктовый лед</li>
                                 <li><a href="#"></a>Мелорин</li>
@@ -26,16 +26,15 @@
                     </ul>
                     <ul class="user-navigation">
                         <li>
-                          <img src="" width="" height="">
+                           <span class="visually-hidden">Поиск</span>
                           <form action="" method="get">
                             <input type="text" name="search" placeholder="Что ищем?">
                           </form>
                         </li>
                         <li>
-                            <a href="#"class="login-link">Вход</a>
-                            <img src="" width="" height="">
+                            <a href="#" class="login-link">Вход</a>
                             <form>
-                                <input name="e-mail" placeholder="Электронная почта">
+                                <input type="text" name="e-mail" placeholder="Электронная почта">
                                 <br>
                                 <input name="pass" type="password" placeholder="Пароль">
                                 <button type="submit">Войти</button> 
@@ -45,18 +44,17 @@
                         </li>
                         <li>
                             <a href="#" class="basket">Пусто</a>
-                            <img src="" width="" height="">
                         </li>      
                     </ul>               
         </nav>
           <div class="header-info">
           <p>С 10 до 20, ежедневно</p>
-          <a href="tel: +781245025258">812 450-25-25</a>
+          <a href="tel:+781245025258">812 450-25-25</a>
           </div>
           <div class="slider">
               <div class="slide1">
                   <b>Крем-брюле и пломбир с малиновым джемом</b>
-                  <button>Давайте оба!</button>
+                  <a href="#">Давайте оба!</a>
                   <img src="" width="" height="" alt="...">
               </div>
               <div class="slide2">
@@ -82,36 +80,44 @@
           <div class="action-first">
             <h2>Малинка даром!</h2>
             <p>При покупке 2 кг любого фруктового мороженогоБ добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <btn>Хочу варенье!</btn>
+            <a href="#">Хочу варенье!</a>
           </div>
           <div class="action-second">
             <h2>Шоколадки даром!</h2>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <button>Хочу шоколадки!</button>
+            <a href="#">Хочу шоколадки!</a>
           </div>
       </section>
       
       <section class="range">
       <h2>Ассортимент</h2>
-          <div class="icecream-1">
+          <div class="icecream">
+              <img src="" width="" height="" alt="...">
+              <div class="hit">Хит</div>
               <p>310/<span>кг</span></p>
               <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-              <img src="" width="" height="" alt="...">
+              <a href="#">Быстрый просмотр</a>
           </div>
-          <div class="icecream-2">
+          <div class="icecream">              
+              <img src="" width="" height="" alt="...">
+              <div class="hit">Хит</div>
               <p>380/<span>кг</span></p>
               <p>Сливочно-кофейное с кусочками шоколада</p>
-              <img src="" width="" height="" alt="...">
+              <a href="#">Быстрый просмотр</a>
           </div>          
-          <div class="icecream-3">
+          <div class="icecream">
+              <img src="" width="" height="" alt="...">
+              <div class="hit">Хит</div>
               <p>355/<span>кг</span></p>
               <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-              <img src="" width="" height="" alt="...">
+              <a href="#">Быстрый просмотр</a>
           </div>
-          <div class="icecream-4">
+          <div class="icecream">              
+              <img src="" width="" height="" alt="...">
+              <div class="hit">Хит</div>
               <p>415/<span>кг</span></p>
               <p>Сливочное крем-брюле с карамельной подливкой</p>
-              <img src="" width="" height="" alt="...">
+              <a href="#">Быстрый просмотр</a>
           </div>                  
      </section>
       
@@ -139,11 +145,14 @@
       </article>
 
       <section class="subscription">
-          <h1>
+          <h2>
               Подписка
-          </h1>
-          Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
-          <button>Отправить</button>
+          </h2>
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form class="subscription">
+              <input type="text" name="e-mail" placeholder="Электронная почта">              
+              <button type="submit">Войти</button> 
+          </form>
       </section>
       
           <div class="map">
@@ -155,13 +164,9 @@
           <p>Адрес главного офиса и офлайн-магазина:</p>
           <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
           <p>Для заказов по телефону:</p>
-          <a href="tel: +781245025258">812 450-25-25</a>
-          <p>(с 10 до 20 ежедневно)</p>          
-          <form action="" method="post">
-            <input type="text" name="e-mail">
-              <br>
-            <input type="submit" value="Форма обратной связи">
-          </form>          
+          <a href="tel:+781245025258">812 450-25-25</a>
+          <p>(с 10 до 20 ежедневно)</p>
+          <a href="#">Форма обратной связи</a>                 
       </section>
       </main>
       
@@ -178,7 +183,17 @@
               <li><a href="#">Наши документы</a></li>
               <li><a href="#">Экологические стандарты</a></li>
           </ul>          
-          <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2017</a>
       </footer>
+      <form>
+          <input type="text" name="name" placeholder="Как вас зовут?">
+          <br>
+          <input type="password" name="e-mail"  placeholder="Ваша почта для ответа?">
+          <br>
+          <textarea name="inquiry" id="inquiry-field" rows="" cols="">Напишите что-нибудь...</textarea>          
+          <button type="submit">Войти</button>
+      </form>
+      
   </body>
 </html>
