@@ -13,83 +13,87 @@
             </a>         
                     <ul class="site-navigation">
                         <li>
-                            <a href="#">Каталог</a>
+                            <a href="#">Каталог</a><!--должна ли здесь быть ссылка? нажатием на каталог мы просто открываем всплывающее меню-->
                             <ul class="site-navigation-cataloge">
-                                <li><a href="#"></a>Новинки</li>
-                                <li><a href="catalog.html"></a>Сливочное</li>
-                                <li><a href="#"></a>Щербеты</li>
-                                <li><a href="#"></a>Фруктовый лед</li>
-                                <li><a href="#"></a>Мелорин</li>
+                                <li><a href="novelties.html">Новинки</a></li>
+                                <li><a href="catalog.html">Сливочное</a></li>
+                                <li><a href="scherbet.html">Щербеты</a></li>
+                                <li><a href="fruit_ice.html">Фруктовый лед</a></li>
+                                <li><a href="melorin.html">Мелорин</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Доставка и оплата</a></li>
-                        <li><a href="#">О компании</a></li>  
+                        <li><a href="shipping_payment.html">Доставка и оплата</a></li>
+                        <li><a href="about_us.html">О компании</a></li>  
                     </ul>
                     <ul class="user-navigation">
                         <li>                            
-                            <span class="visually-hidden">Поиск</span>
-                          <form action="" method="get">
-                            <input type="search" name="search" placeholder="Что ищем?">
+                          <span class="visually-hidden">Поиск</span>
+                          <form method="get">
+                           <input type="search" name="search" placeholder="Что ищем?">
                           </form>
                         </li>
                         <li>
-                            <a href="#" class="login-link">Вход</a>
+                            <a href="entrance.html" class="login-link">Вход</a>
                             <form>
                                 <input type="text" name="e-mail" placeholder="Электронная почта">
                                 <br>
                                 <input name="pass" type="password" placeholder="Пароль">
                                 <button type="submit">Войти</button> 
                             </form>
-                            <a href="#">Забыли пароль</a>
-                            <a href="#">Новая регистрация</a>
+                            <a href="forgot_password.html">Забыли пароль</a>
+                            <a href="new_register.html">Новая регистрация</a>
                         </li>
                         <li>
-                            <a href="#" class="basket">Пусто</a>
+                            <span class="visually-hidden">Корзина</span>
+                            <a href="basket.html" class="basket">Пусто</a>
                         </li>      
                     </ul>               
         </nav>
+          
+          
           <div class="header-info">
+          <span class="visually-hidden">График работы и контактный телефон</span>
           <p>С 10 до 20, ежедневно</p>
           <a href="tel:+781245025258">812 450-25-25</a>
           </div>
+          
+          
           <div class="slider">
+              <span class="visually-hidden">Спецпредложение: вместе вкуснее</span>
               <div class="slide1">                   
-                  <b>Крем-брюле и пломбир с малиновым джемом</b>
-                  <b>Шоколадный пломбир и лимонный сорбет </b>
-                  <b>Пломбир с помадкой и клубничный щербет</b>
-                  <a href="#">Давайте оба!</a>
+                  <b>Крем-брюле и пломбир с малиновым джемом</b> 
+                  <a href="basket.html">Давайте оба!<span class="visually-hidden">Добавить в корзину</span></a>
                   <img src="img/ice_cream_1.png" width="1045px" height="881px">
               </div>
               <div class="slide2">
-                  <b>...</b>
-                  <button>...</button>
+                  <b>Шоколадный пломбир и лимонный сорбет</b>
+                  <a href="basket.html">Давайте оба!<span class="visually-hidden">Добавить в корзину</span></a>
                   <img src="img/ice_cream_2.png" width="1045px" height="881px">
-
               </div>
               <div class="slide3">
-                  <b>...</b>
-                  <button>...</button>
+                  <b>Пломбир с помадкой и клубничный щербет</b>
+                  <a href="basket.html">Давайте оба!<span class="visually-hidden">Добавить в корзину</span></a>
                   <img src="img/ice_cream_3.png" width="1045px" height="881px">
               </div>
               <div class="control">
-                  
               </div>
-          </div>
-                        
+          </div>       
       </header>
       
       <main>
       <section class="action">
-        <h2>Акции</h2>
+        <h2 class="visually-hidden">Акции</h2>
           <div class="action-first">
+            <span class="visually-hidden">Первая акция</span>  
             <h2>Малинка даром!</h2>
-            <p>При покупке 2 кг любого фруктового мороженогоБ добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a href="#">Хочу варенье!</a>
+            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a href="basket.html">Хочу варенье!<span class="visually-hidden">Добавить в корзину</span></a>
           </div>
           <div class="action-second">
+            <span class="visually-hidden">Вторая акция</span>
             <h2>Шоколадки даром!</h2>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a href="#">Хочу шоколадки!</a>
+            <a href="basket.html">Хочу шоколадки!<span class="visually-hidden">Добавить в корзину</span></a>
           </div>
       </section>
       
@@ -100,28 +104,28 @@
               <span class="hit">Хит</span>
               <p>310/<span>кг</span></p>
               <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-              <a href="#">Быстрый просмотр</a>
+              <a href="vanilla_ice_cream.html">Быстрый просмотр</a>
           </div>
           <div class="icecream">              
               <img src="img/2_coffee_ice_cream.jpg" width="267px" height="267px">
               <span class="hit">Хит</span>
               <p>380/<span>кг</span></p>
               <p>Сливочно-кофейное с кусочками шоколада</p>
-              <a href="#">Быстрый просмотр</a>
+              <a href="coffee_ice_cream.html">Быстрый просмотр</a>
           </div>          
           <div class="icecream">
               <img src="img/3_strawberry_ice_cream_.jpg" width="267px" height="267px">
               <span class="hit">Хит</span>
               <p>355/<span>кг</span></p>
               <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-              <a href="#">Быстрый просмотр</a>
+              <a href="strawberry_ice_cream.html">Быстрый просмотр</a>
           </div>
           <div class="icecream">              
               <img src="img/4_creme_brulee_ice_cream.jpg" width="267px" height="267px">
               <span class="hit">Хит</span>
               <p>415/<span>кг</span></p>
               <p>Сливочное крем-брюле с карамельной подливкой</p>
-              <a href="#">Быстрый просмотр</a>
+              <a href="creme_brulee_ice_cream.html">Быстрый просмотр</a>
           </div>                  
      </section>
       
@@ -145,7 +149,7 @@
             
       <article class="blog">
       <h1>Новое в нашем блоге</h1>
-      <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+      <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
 
       <section class="subscription">
@@ -160,6 +164,7 @@
       </section>
       
           <div class="map">
+              <span class="visually-hidden">Карта: как нас найти</span>
               <img src="img/map.png" width="1200px" height="430px" alt="Карта"> 
           </div>
           
@@ -170,7 +175,7 @@
           <p>Для заказов по телефону:</p>
           <a href="tel:+781245025258">812 450-25-25</a>
           <p>(с 10 до 20 ежедневно)</p>
-          <a href="#">Форма обратной связи</a>                 
+          <a href="feedback_form.html">Форма обратной связи</a>                 
       </section>
       </main>
       
@@ -185,12 +190,12 @@
                   </ul>
           </section>
           <section class="about-us">
-              <h2>О нас</h2>
+              <h2 class="visually-hidden">О нас</h2>
           <ul>
-              <li><a href="#">Для поставщиков</a></li>
-              <li><a href="#">О производстве</a></li>
-              <li><a href="#">Наши документы</a></li>
-              <li><a href="#">Экологические стандарты</a></li>
+              <li><a href="for_suppliers.html">Для поставщиков</a></li>
+              <li><a href="about_production.html">О производстве</a></li>
+              <li><a href="our_documents.html">Наши документы</a></li>
+              <li><a href="eco_standards.html">Экологические стандарты</a></li>
           </ul>       
           </section>
           <section class="developer">
@@ -200,14 +205,15 @@
               </section>
       </footer>
       <div class="modal">
-      <form>
+          <h2>Мы обязательно вам ответим!</h2>
+          <form>
           <input type="text" name="name" placeholder="Как вас зовут?">
           <br>
           <input type="password" name="e-mail"  placeholder="Ваша почта для ответа?">
           <br>
           <textarea name="inquiry" id="inquiry-field" rows="" cols="">Напишите что-нибудь...</textarea>          
           <button type="submit">Отправить</button>
-      </form>
+            </form>
      </div> 
   </body>
 </html>
