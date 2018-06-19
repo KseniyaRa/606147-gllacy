@@ -1,8 +1,319 @@
 body {
+    margin: 0;
+    padding: 0;
+    background-color: #849d8f;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Roboto, Arial, sans-serif;    
 }
-.login-link {
-  background-image: ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);  
-  width: 100px;
-  height: 44px;
+
+.button-background{
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    border-radius: 30px;
+}
+
+.button-background:hover {    
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+}
+
+.button-background:active {    
+    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+    box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
+.site-navigation > li > a {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: normal;
+}
+
+.site-navigation,
+.site-navigation-cataloge
+{
+    list-style-type: none;
+}
+
+.site-navigation-cataloge-name:hover {
+    background-color: rgb(247, 246, 243);
+    background-size: 87px 32px;
+    color: #323232;     
+}
+
+.site-navigation-cataloge-name:active {
+    background-color: rgba(248, 247, 244, 0.988);
+    box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+    background-size: 87px 32px;
+    color: #323232;    
+}
+
+.site-navigation-cataloge-name:visited {
+    background-color: rgb(208, 112, 88);
+    width: 87px;
+    height: 32px;
+    color: #ffffff;
+}
+
+.site-navigation-cataloge {
+    border-radius: 5px;
+    background-color: rgb(248, 247, 244);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    background-size: 143px 171px;
+}
+
+.site-navigation-cataloge-name .site-navigation-cataloge {
+   display: none; 
+}
+
+.site-navigation-cataloge-name:hover .site-navigation-cataloge {
+    display: inline;
+}
+
+.site-navigation-cataloge li:first-of-type a {
+    font-size: 14px;
+    line-height: 16px;
+    color: #323232;
+    text-decoration: none;
+    font-family: Roboto, Arial, sans-serif;
+    background-size: 143px 28px;
+}
+
+.site-navigation-cataloge li:not(:first-of-type) a {
+    font-size: 14px;
+    line-height: 16px;
+    color: #323232;
+    font-weight: normal;
+    text-decoration: none;
+    font-family: Roboto, Arial, sans-serif;
+    background-size: 143px 28px;
+}
+
+.site-navigation-cataloge a:hover{
+  background-color: #fbded7;
+}
+
+.site-navigation-cataloge a:active{
+  background-color: #f6b5a5;
+}
+
+.site-navigation-cataloge a:visited{
+  background-color: #d07058;
+}
+
+.user-navigation {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal; 
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.user-navigation a{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;    
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+.user-navigation-pop-up {
+    font-size: 16px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: normal;
+}
+
+.search:hover {
+    border-radius: 50%;
+    background-color: rgb(248, 247, 244);
+    background-size: 33px 33px;
+}
+
+.login-link:hover {
+    background-color: rgb(248, 247, 244);
+    background-size: 93px 32px;
+    color: #323232;
+}
+
+.button-entrance {
+    background-size: 100px 44px;    
+    font-weight: bold;
+    font-family: Roboto, Arial, sans-serif; 
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.difficulty a {
+    font-family: Roboto, Arial, sans-serif; 
+    font-size: 13px;
+    line-height: 24px;
+    text-decoration: underline;
+    color: #323232;
+}
+
+.header-info p{
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.header-info a{
+    font-size: 22px;
+    line-height: 24px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.slider b{
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.slider a {
+    font-size: 32px;
+    line-height: 44px;
+    background-size: 280px 64px;   
+}
+
+.action h2 {
+    font-size: 35px;
+    line-height: 41px;
+}
+
+.action p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.action-first a {
+    font-size: 18px;
+    line-height: 24px;
+    background-size: 165px 46;
+}
+
+.action-second a{
+    font-size: 18px;
+    line-height: 24px;
+    background-size: 189px 45px;  
+}
+
+.icecream p{
+    font-size: 45px;
+    line-height: 45px;
+    color: rgb(255, 255, 255);    
+    text-align: left;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+}
+
+.icecream span {
+    font-size: 30px;
+}
+
+.icecream a{
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+.features h2{
+    font-size: 24px;
+    line-height: 30px;
+    color: #323232;
+    font-weight: normal;
+}
+
+.features li{
+   font-size: 16px;
+   line-height: 22px;
+   color: #323232;
+   font-weight: normal;  
+}
+
+.blog h1{
+    font-size: 16px;
+    line-height: 22px;
+    color: #323232;
+    font-weight: normal;  
+}
+
+.blog a{
+    font-size: 24px;
+    line-height: 30px;
+    color: #323232;
+}
+
+.subscription p{
+    font-size: 16px;
+    line-height: 22px;
+    color: #5a5a5a;
+    font-weight: normal;
+}
+
+.subscription button{
+    font-size: 18px;
+    line-height: 24px; 
+    background-size: 129px 44px;
+}
+
+.contacts p{
+    font-size: 14px;
+    line-height: 20px;
+    color: #323232;
+    font-weight: normal;
+}
+
+.contacts b,
+.contacts a{
+    font-size: 18px;
+    line-height: 24px;
+    color: #323232;
+    text-decoration: none;
+}
+
+.contacts a:last-child {
+   color: #fefefe; 
+  background-size: 252px 44px;
+}
+
+.main-footer a {
+    font-size: 13px;
+    line-height: 18px;
+    color: #fefefe;
+    font-weight: normal;
+}
+
+
+.about-us li:first-child a{
+    font-weight: bold;
+}
+
+.developer a {
+    font-size: 12px;
+}
+
+.modal-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #999999;
+    font-weight: normal;
+}
+
+.modal button {
+    font-size: 18px;
+    line-height: 24px;
+    background-size: 139px 44px;    
 }

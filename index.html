@@ -2,8 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css" >
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
   </head>
   <body>
       <header class="main-header">
@@ -13,7 +16,7 @@
             </a>         
                     <ul class="site-navigation">
                         <li>
-                            <a href="#">Каталог</a>
+                            <a href="#" class="site-navigation-cataloge-name">Каталог</a>
                             <ul class="site-navigation-cataloge">
                                 <li><a href="novelties.html">Новинки</a></li>
                                 <li><a href="catalog.html">Сливочное</a></li>
@@ -29,19 +32,21 @@
                         <li>                            
                           <span class="visually-hidden">Поиск</span>
                           <form method="get">
-                           <input type="search" name="search" placeholder="Что ищем?">
+                           <input type="search" name="search" class="search user-navigation-pop-up" placeholder="Что ищем?">
                           </form>
                         </li>
                         <li>
                             <a href="entrance.html" class="login-link">Вход</a>
                             <form>
-                                <input type="text" name="e-mail" placeholder="Электронная почта">
+                                <input type="text" name="e-mail" placeholder="Электронная почта" class="user-navigation-pop-up">
                                 <br>
-                                <input name="pass" type="password" placeholder="Пароль">
-                                <button type="submit">Войти</button> 
+                                <input name="pass" type="password" placeholder="Пароль" class="user-navigation-pop-up">
+                                <button type="submit" class="button-entrance button-background">Войти</button> 
                             </form>
+                            <div class="difficulty">
                             <a href="forgot_password.html">Забыли пароль</a>
                             <a href="new_register.html">Новая регистрация</a>
+                            </div>
                         </li>
                         <li>
                             <span class="visually-hidden">Корзина</span>
@@ -62,17 +67,17 @@
               <span class="visually-hidden">Спецпредложение: вместе вкуснее</span>
               <div class="slide1">                   
                   <b>Крем-брюле и пломбир с малиновым джемом</b> 
-                  <a href="basket.html">Давайте оба!<span class="visually-hidden">Добавить в корзину</span></a>
+                  <a href="basket.html" class="button-background">Давайте оба!<span class="visually-hidden">Добавить в корзину</span></a>
                   <img src="img/ice_cream_1.png" width="1045px" height="881px">
               </div>
               <div class="slide2">
                   <b>Шоколадный пломбир и лимонный сорбет</b>
-                  <a href="basket.html">Давайте оба!<span class="visually-hidden">Добавить в корзину</span></a>
+                  <a href="basket.html" class="button-background">Давайте оба!<span class="visually-hidden">Добавить в корзину</span></a>
                   <img src="img/ice_cream_2.png" width="1045px" height="881px">
               </div>
               <div class="slide3">
                   <b>Пломбир с помадкой и клубничный щербет</b>
-                  <a href="basket.html">Давайте оба!<span class="visually-hidden">Добавить в корзину</span></a>
+                  <a href="basket.html" class="button-background">Давайте оба!<span class="visually-hidden">Добавить в корзину</span></a>
                   <img src="img/ice_cream_3.png" width="1045px" height="881px">
               </div>
               <div class="control">
@@ -87,13 +92,13 @@
             <span class="visually-hidden">Первая акция</span>  
             <h2>Малинка даром!</h2>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a href="basket.html">Хочу варенье!<span class="visually-hidden">Добавить в корзину</span></a>
+            <a href="basket.html" class="button-background">Хочу варенье!<span class="visually-hidden">Добавить в корзину</span></a>
           </div>
           <div class="action-second">
             <span class="visually-hidden">Вторая акция</span>
             <h2>Шоколадки даром!</h2>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a href="basket.html">Хочу шоколадки!<span class="visually-hidden">Добавить в корзину</span></a>
+            <a href="basket.html" class="button-background">Хочу шоколадки!<span class="visually-hidden">Добавить в корзину</span></a>
           </div>
       </section>
       
@@ -104,28 +109,28 @@
               <span class="hit">Хит</span>
               <p>310/<span>кг</span></p>
               <a href="vanilla_ice_cream_full.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-              <a href="vanilla_ice_cream.html">Быстрый просмотр</a>
+              <a href="vanilla_ice_cream.html" class="button-background">Быстрый просмотр</a>
           </div>
           <div class="icecream">              
               <img src="img/2_coffee_ice_cream.jpg" width="267px" height="267px">
               <span class="hit">Хит</span>
               <p>380/<span>кг</span></p>
               <a href="coffee_ice_cream_full.html">Сливочно-кофейное с кусочками шоколада</a>
-              <a href="coffee_ice_cream.html">Быстрый просмотр</a>
+              <a href="coffee_ice_cream.html"class="button-background">Быстрый просмотр</a>
           </div>          
           <div class="icecream">
               <img src="img/3_strawberry_ice_cream_.jpg" width="267px" height="267px">
               <span class="hit">Хит</span>
               <p>355/<span>кг</span></p>
               <a href="strawberry_ice_cream_full.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
-              <a href="strawberry_ice_cream.html">Быстрый просмотр</a>
+              <a href="strawberry_ice_cream.html"class="button-background">Быстрый просмотр</a>
           </div>
           <div class="icecream">              
               <img src="img/4_creme_brulee_ice_cream.jpg" width="267px" height="267px">
               <span class="hit">Хит</span>
               <p>415/<span>кг</span></p>
               <a href="creme_brulee_ice_cream_full.html">Сливочное крем-брюле с карамельной подливкой</a>
-              <a href="creme_brulee_ice_cream.html">Быстрый просмотр</a>
+              <a href="creme_brulee_ice_cream.html" class="button-background">Быстрый просмотр</a>
           </div>                  
      </section>
       
@@ -159,7 +164,7 @@
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form class="subscription">
               <input type="text" name="e-mail" placeholder="Электронная почта">              
-              <button type="submit">Войти</button> 
+              <button type="submit" class="button-background">Отправить</button> 
           </form>
       </section>
       
@@ -169,13 +174,13 @@
           </div>
           
       <section class="contacts">
-          <h1>Контакты</h1>
+          <h1 class="visually-hidden">Контакты</h1>
           <p>Адрес главного офиса и офлайн-магазина:</p>
           <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
           <p>Для заказов по телефону:</p>
           <a href="tel:+781245025258">812 450-25-25</a>
           <p>(с 10 до 20 ежедневно)</p>
-          <a href="feedback_form.html">Форма обратной связи</a>                 
+          <a href="feedback_form.html" class="button-background">Форма обратной связи</a>                 
       </section>
       </main>
       
@@ -207,12 +212,12 @@
       <div class="modal">
           <h2>Мы обязательно вам ответим!</h2>
           <form>
-          <input type="text" name="name" placeholder="Как вас зовут?">
+          <input type="text" name="name" placeholder="Как вас зовут?" class="modal-text">
           <br>
-          <input type="password" name="e-mail"  placeholder="Ваша почта для ответа?">
+          <input type="password" name="e-mail"  placeholder="Ваша почта для ответа?" class="modal-text">
           <br>
-          <textarea name="inquiry" id="inquiry-field" rows="" cols="">Напишите что-нибудь...</textarea>          
-          <button type="submit">Отправить</button>
+          <textarea name="inquiry" id="inquiry-field" rows="" cols="" class="modal-text">Напишите что-нибудь...</textarea>          
+          <button type="submit" class="button-background">Отправить</button>
             </form>
      </div> 
   </body>
