@@ -3,22 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet"> 
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">    
+    <link href="css/style.css" rel="stylesheet">
+    
   </head>
   <body>
       <header class="main-header">
         <nav class="main-navigation">
-            <a class="main-header-logo" href="index.html">
-                <img src="img/logo_.png" width="154px" height="64px" alt="Логотип магазина мороженого Глэйси">
+            <a class="main-header-logo">
+                <img src="img/logo_.png" width="154" height="64" alt="Логотип магазина мороженого Глэйси">
             </a>         
                     <ul class="site-navigation">
                         <li>
-                            <a href="#">Каталог</a>
+                            <a href="#" class="site-navigation-cataloge-name">Каталог</a>
                             <ul class="site-navigation-cataloge">
                                 <li><a href="novelties.html">Новинки</a></li>
-                                <li><a class="link-current">Сливочное</a></li>
+                                <li><a href="catalog.html">Сливочное</a></li>
                                 <li><a href="scherbet.html">Щербеты</a></li>
                                 <li><a href="fruit_ice.html">Фруктовый лед</a></li>
                                 <li><a href="melorin.html">Мелорин</a></li>
@@ -31,19 +32,21 @@
                         <li>                            
                           <span class="visually-hidden">Поиск</span>
                           <form method="get">
-                           <input type="search" name="search" placeholder="Что ищем?">
+                           <input type="search" name="search" class="search user-navigation-pop-up" placeholder="Что ищем?">
                           </form>
                         </li>
                         <li>
                             <a href="entrance.html" class="login-link">Вход</a>
                             <form>
-                                <input type="text" name="e-mail" placeholder="Электронная почта">
+                                <input type="text" name="e-mail" placeholder="Электронная почта" class="user-navigation-pop-up">
                                 <br>
-                                <input name="pass" type="password" placeholder="Пароль">
-                                <button type="submit" class="button-background">Войти</button> 
+                                <input name="pass" type="password" placeholder="Пароль" class="user-navigation-pop-up">
+                                <button type="submit" class="button-entrance button-background">Войти</button> 
                             </form>
+                            <div class="difficulty">
                             <a href="forgot_password.html">Забыли пароль</a>
                             <a href="new_register.html">Новая регистрация</a>
+                            </div>
                         </li>
                         <li>
                             <span class="visually-hidden">Корзина</span>

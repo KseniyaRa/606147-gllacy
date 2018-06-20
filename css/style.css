@@ -3,88 +3,81 @@ body {
     padding: 0;
     background-color: #849d8f;
     color: #ffffff;
-    font-weight: bold;
     font-family: Roboto, Arial, sans-serif;    
 }
 
-.button-background{
+.button-background{ /*стилизация кнопок*/
     color: #ffffff;
+    font-weight: 700;
     text-decoration: none;
     text-align: center;
-    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);     
     background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
     border-radius: 30px;
 }
 
-.button-background:hover {    
-    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+.button-background:hover { /*стилизация кнопок при наведении*/    
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.004);
 }
 
-.button-background:active {    
-    text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-    box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+.button-background:active { /*стилизация кнопок при нажатии*/
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+    background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);    
+    box-shadow: inset 0 2px 2px 0 rgba(148, 39, 24, 0.004);
 }
 
-.site-navigation > li > a {
+.site-navigation > li > a {/*стилизация Каталог Доставка О компании*/
     font-size: 16px;
     line-height: 18px;
     color: #ffffff;
     font-family: Roboto, Arial, sans-serif;
-    font-weight: normal;
+    font-weight: 700;
 }
 
 .site-navigation,
-.site-navigation-cataloge
+.site-navigation-catalog
 {
     list-style-type: none;
 }
 
-.site-navigation-cataloge-name:hover {
+.site-navigation-catalog-name:hover {
     background-color: rgb(247, 246, 243);
     background-size: 87px 32px;
     color: #323232;     
 }
 
-.site-navigation-cataloge-name:active {
+.site-navigation-catalog-name:active {
     background-color: rgba(248, 247, 244, 0.988);
     box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
-    background-size: 87px 32px;
     color: #323232;    
 }
 
-.site-navigation-cataloge-name:visited {
+/*стилизация при нахождении на текущей странице .site-navigation-catalog-name:visited {
     background-color: rgb(208, 112, 88);
     width: 87px;
     height: 32px;
     color: #ffffff;
-}
+}*/
 
-.site-navigation-cataloge {
+.site-navigation-catalog {
     border-radius: 5px;
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
     background-size: 143px 171px;
 }
 
-.site-navigation-cataloge-name .site-navigation-cataloge {
+.site-navigation-catalog-name .site-navigation-catalog {
    display: none; 
 }
 
-.site-navigation-cataloge-name:hover .site-navigation-cataloge {
+.site-navigation-catalog-name:hover .site-navigation-catalog {
     display: inline;
 }
 
-.site-navigation-cataloge li:first-of-type a {
+.site-navigation-catalog li:first-of-type a {
     font-size: 14px;
     line-height: 16px;
     color: #323232;
@@ -93,39 +86,39 @@ body {
     background-size: 143px 28px;
 }
 
-.site-navigation-cataloge li:not(:first-of-type) a {
+.site-navigation-catalog li:not(:first-of-type) a {
     font-size: 14px;
     line-height: 16px;
     color: #323232;
-    font-weight: normal;
+    font-weight: 400;
     text-decoration: none;
     font-family: Roboto, Arial, sans-serif;
     background-size: 143px 28px;
 }
 
-.site-navigation-cataloge a:hover{
+.site-navigation-catalog a:hover{
   background-color: #fbded7;
 }
 
-.site-navigation-cataloge a:active{
+.site-navigation-catalog a:active{
   background-color: #f6b5a5;
 }
 
-.site-navigation-cataloge a:visited{
+.site-navigation-catalog a:visited{
   background-color: #d07058;
 }
 
 .user-navigation {
     font-size: 14px;
     line-height: 16px;
-    font-weight: normal; 
+    font-weight: 400; 
     font-family: Roboto, Arial, sans-serif;
 }
 
 .user-navigation a{
     font-size: 14px;
     line-height: 16px;
-    font-weight: normal;    
+    font-weight: 400;    
     color: #ffffff;
     text-decoration: none;
     font-family: Roboto, Arial, sans-serif;
@@ -135,7 +128,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #999999;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .search:hover {
@@ -152,7 +145,7 @@ body {
 
 .button-entrance {
     background-size: 100px 44px;    
-    font-weight: bold;
+    font-weight: 700;
     font-family: Roboto, Arial, sans-serif; 
     font-size: 18px;
     line-height: 24px;
@@ -202,7 +195,7 @@ body {
 .action-first a {
     font-size: 18px;
     line-height: 24px;
-    background-size: 165px 46;
+    background-size: 165px 46px;
 }
 
 .action-second a{
@@ -233,21 +226,21 @@ body {
     font-size: 24px;
     line-height: 30px;
     color: #323232;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .features li{
    font-size: 16px;
    line-height: 22px;
    color: #323232;
-   font-weight: normal;  
+   font-weight: 400;  
 }
 
 .blog h1{
     font-size: 16px;
     line-height: 22px;
     color: #323232;
-    font-weight: normal;  
+    font-weight: 400;  
 }
 
 .blog a{
@@ -260,7 +253,7 @@ body {
     font-size: 16px;
     line-height: 22px;
     color: #5a5a5a;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .subscription button{
@@ -273,7 +266,7 @@ body {
     font-size: 14px;
     line-height: 20px;
     color: #323232;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .contacts b,
@@ -293,12 +286,12 @@ body {
     font-size: 13px;
     line-height: 18px;
     color: #fefefe;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 
 .about-us li:first-child a{
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .developer a {
@@ -309,7 +302,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #999999;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 .modal button {
