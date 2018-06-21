@@ -3,7 +3,19 @@ body {
     padding: 0;
     background-color: #849d8f;
     color: #ffffff;
-    font-family: Roboto, Arial, sans-serif;    
+    font-family: Roboto, Arial, sans-serif; 
+    font-weight: 400;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .button-background{ /*стилизация кнопок*/
@@ -69,18 +81,11 @@ body {
     background-size: 143px 171px;
 }
 
-.site-navigation-catalog-name .site-navigation-catalog {
-   display: none; 
-}
-
-.site-navigation-catalog-name:hover .site-navigation-catalog {
-    display: inline;
-}
-
 .site-navigation-catalog li:first-of-type a {
     font-size: 14px;
     line-height: 16px;
     color: #323232;
+    font-weight: 700;
     text-decoration: none;
     font-family: Roboto, Arial, sans-serif;
     background-size: 143px 28px;
@@ -111,21 +116,21 @@ body {
 .user-navigation {
     font-size: 14px;
     line-height: 16px;
-    font-weight: 400; 
+    font-weight: 500; 
     font-family: Roboto, Arial, sans-serif;
 }
 
 .user-navigation a{
     font-size: 14px;
     line-height: 16px;
-    font-weight: 400;    
+    font-weight: 500;    
     color: #ffffff;
     text-decoration: none;
     font-family: Roboto, Arial, sans-serif;
 }
 
-.user-navigation-pop-up {
-    font-size: 16px;
+.user-navigation input::-webkit-input-placeholder {
+    font-size: 14px;
     line-height: 24px;
     color: #999999;
     font-weight: 400;
@@ -157,11 +162,45 @@ body {
     line-height: 24px;
     text-decoration: underline;
     color: #323232;
+    font-weight: 700;
 }
 
-.header-info p{
+.basket {
     font-size: 14px;
     line-height: 16px;
+    color: #323232;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.basket-with-goods {
+    font-size: 13px;
+    line-height: 16px;
+    color: #323232;    
+    font-weight: 400;
+}
+
+.basket-with-goods span {
+    color: #999999;
+}
+
+.basket-with-goods p {
+    font-size: 15px;
+    line-height: 18px;
+    color: #323232;    
+    font-weight: 700;
+}
+
+.basket-with-goods a {
+    font-size: 18px;
+    line-height: 24px; 
+    font-weight: 700;
+}
+    
+.header-info p {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
 }
 
 .header-info a{
@@ -169,39 +208,46 @@ body {
     line-height: 24px;
     color: #ffffff;
     text-decoration: none;
+    font-weight: 700;
 }
 
-.slider b{
+.slider p{
     font-size: 60px;
     line-height: 60px;
+    font-weight: 700;
 }
 
 .slider a {
     font-size: 32px;
     line-height: 44px;
-    background-size: 280px 64px;   
+    background-size: 280px 64px;  
+    font-weight: 700;
 }
 
 .action h2 {
     font-size: 35px;
     line-height: 41px;
+    font-weight: 700;
 }
 
 .action p {
     font-size: 18px;
     line-height: 22px;
+    font-weight: 700;
 }
 
 .action-first a {
     font-size: 18px;
     line-height: 24px;
     background-size: 165px 46px;
+    font-weight: 700;
 }
 
 .action-second a{
     font-size: 18px;
     line-height: 24px;
-    background-size: 189px 45px;  
+    background-size: 189px 45px; 
+    font-weight: 700;
 }
 
 .icecream p{
@@ -210,6 +256,7 @@ body {
     color: rgb(255, 255, 255);    
     text-align: left;
     text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+    font-weight: 700;
 }
 
 .icecream span {
@@ -220,13 +267,18 @@ body {
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
+    font-weight: 500;
+}
+
+.icecream a:last-of-type {
+    font-size: 18px;
 }
 
 .features h2{
     font-size: 24px;
     line-height: 30px;
     color: #323232;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .features li{
@@ -240,13 +292,14 @@ body {
     font-size: 16px;
     line-height: 22px;
     color: #323232;
-    font-weight: 400;  
+    font-weight: 500;  
 }
 
 .blog a{
     font-size: 24px;
     line-height: 30px;
     color: #323232;
+    font-weight: 700;
 }
 
 .subscription p{
@@ -260,6 +313,15 @@ body {
     font-size: 18px;
     line-height: 24px; 
     background-size: 129px 44px;
+    font-weight: 700;
+}
+
+.subscription input::-webkit-input-placeholder, 
+.modal input::-webkit-input-placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #999999;
 }
 
 .contacts p{
@@ -279,7 +341,8 @@ body {
 
 .contacts a:last-child {
    color: #fefefe; 
-  background-size: 252px 44px;
+   background-size: 252px 44px;
+    font-weight: 700;
 }
 
 .main-footer a {
@@ -289,13 +352,20 @@ body {
     font-weight: 400;
 }
 
-
 .about-us li:first-child a{
     font-weight: 700;
 }
 
 .developer a {
     font-size: 12px;
+    font-weight: 400;
+}
+
+.modal h2 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #323232;
+    font-weight: 500;
 }
 
 .modal-text {
@@ -309,4 +379,51 @@ body {
     font-size: 18px;
     line-height: 24px;
     background-size: 139px 44px;    
+}
+
+.breadcrumbs a {
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;    
+    font-weight: 400;
+}
+
+.link-current {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+main h1 {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+}
+
+.preferenses {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+}
+
+.preferenses > label:not(:last-of-type) {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.preferenses label span {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.preferenses button {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.188);
+    background-size: 148px 41px;
 }
