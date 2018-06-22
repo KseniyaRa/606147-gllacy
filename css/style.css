@@ -67,12 +67,12 @@ body {
     color: #323232;    
 }
 
-/*стилизация при нахождении на текущей странице .site-navigation-catalog-name:visited {
+.site-navigation-catalog-name:focus {
     background-color: rgb(208, 112, 88);
     width: 87px;
     height: 32px;
     color: #ffffff;
-}*/
+}
 
 .site-navigation-catalog {
     border-radius: 5px;
@@ -347,7 +347,7 @@ body {
     line-height: 24px;
     color: #323232;
     text-decoration: none;
-    font-size: 700;
+    font-weight: 700;
 }
 
 .contacts a:last-child {
@@ -418,7 +418,7 @@ main h1 {
 }
 
 .preferenses > label:not(:last-of-type),
-.preferenses label span,
+.preferenses span,
 .preferenses fieldset legend {
     font-size: 14px;
     line-height: 16px;
@@ -457,4 +457,9 @@ main h1 {
     background-color: rgb(255, 255, 255);
     opacity: 0.2;
     background-size: 27px 26px;
+}
+.developer span{
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
 }
