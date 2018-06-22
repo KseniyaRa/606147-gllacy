@@ -136,6 +136,16 @@ body {
     font-weight: 400;
 }
 
+.user-navigation input, 
+.subscription input, 
+.modal input {
+    font-size: 16px;
+    line-height: 24px;
+    color: #323232;
+    font-weight: 700;
+}
+
+
 .search:hover {
     border-radius: 50%;
     background-color: rgb(248, 247, 244);
@@ -267,7 +277,7 @@ body {
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .icecream a:last-of-type {
@@ -337,6 +347,7 @@ body {
     line-height: 24px;
     color: #323232;
     text-decoration: none;
+    font-size: 700;
 }
 
 .contacts a:last-child {
@@ -406,18 +417,15 @@ main h1 {
     font-weight: 500;
 }
 
-.preferenses > label:not(:last-of-type) {
+.preferenses > label:not(:last-of-type),
+.preferenses label span,
+.preferenses fieldset legend {
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
 }
 
-.preferenses label span {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500;
-}
-
+ 
 .preferenses button {
     font-size: 16px;
     line-height: 18px;
@@ -426,4 +434,27 @@ main h1 {
     border: 2px solid rgb(255, 255, 255);
     background-color: rgba(255, 255, 255, 0.188);
     background-size: 148px 41px;
+}
+
+.page a {
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;    
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.page a:hover {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    background-size: 27px 26px;
+}
+
+.page a:active {
+    color: #353535;  
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+    background-size: 27px 26px;
 }
