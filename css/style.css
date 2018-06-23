@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #849d8f;
+    /*background-color: #849d8f;*/
     color: #ffffff;
     font-family: Roboto, Arial, sans-serif; 
     font-weight: 400;
@@ -424,7 +424,6 @@ main h1 {
     line-height: 16px;
     font-weight: 500;
 }
-
  
 .preferenses button {
     font-size: 16px;
@@ -458,8 +457,131 @@ main h1 {
     opacity: 0.2;
     background-size: 27px 26px;
 }
+
 .developer span{
     font-size: 12px;
     line-height: 18px;
     font-weight: 400;
 }
+
+body {
+  /* Временно для сетки */
+  background-image: url("/img/gllacy-index-1200.jpg");
+  background-size: 1200px auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    width: 1145px;
+    height: 600px;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 68px;
+    justify-content: space-between;
+}
+
+.main-header-logo {
+    margin: 0;
+    padding: 0;
+    width: 154px;
+    height: 27px;
+    align-self: flex-start;    
+}
+
+.action {
+    display: flex;    
+    align-items: center;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 1145px;
+    height: 230px;
+    justify-content: center; 
+}
+
+.range {
+    display: flex;    
+    align-items: center;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 1145px;
+    height: 323px;
+    justify-content: center;
+}
+
+.features {
+    display: flex;    
+    align-items: center;
+    margin: auto;
+    margin-bottom: 40px;
+    width: 1145px;
+    height: 307px;
+    justify-content: center;
+}
+
+.blog-subscription {
+    display: flex;    
+    align-items: center;
+    margin: auto;
+    margin-bottom: 487px; /*временно, т.к. карту не стала во флекс вставлять*/
+    width: 1145px;
+    height: 222px;
+    justify-content: center;
+}
+
+.main-footer {
+    display: flex;    
+    align-items: center;
+    margin: auto;
+    width: 1145px;
+    height: 62px;
+    justify-content: center;
+    bottom: 26px;    
+}
+
+.main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+ min-height: 75px;
+}
+
+.site-navigation {
+  margin: 0;
+  padding: 0;
+  width: 680px;
+  list-style: none;  
+}
+
+.user-navigation {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  list-style: none;
+}
+
+.slider {
+    margin: 0;
+    padding: 0;
+    width: 670px;
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-left: 340px;  
+}
+
