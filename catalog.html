@@ -17,13 +17,13 @@
                     <ul class="site-navigation">
                         <li>
                             <a href="#" class="site-navigation-catalog-name">Каталог</a>
-                            <ul class="site-navigation-catalog">
+                            <!--<ul class="site-navigation-catalog">
                                 <li><a href="novelties.html">Новинки</a></li>
                                 <li><a href="catalog.html">Сливочное</a></li>
                                 <li><a href="scherbet.html">Щербеты</a></li>
                                 <li><a href="fruit_ice.html">Фруктовый лед</a></li>
                                 <li><a href="melorin.html">Мелорин</a></li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <li><a href="shipping_payment.html">Доставка и оплата</a></li>
                         <li><a href="about_us.html">О компании</a></li>  
@@ -31,13 +31,13 @@
                     <ul class="user-navigation">
                         <li>                            
                           <span class="visually-hidden">Поиск</span>
-                          <form method="get">
+                          <!--<form method="get">
                            <input type="search" name="search" class="search user-navigation-pop-up" placeholder="Что ищем?">
-                          </form>
+                          </form>-->
                         </li>
                         <li>
                             <a href="entrance.html" class="login-link">Вход</a>
-                            <form>
+                            <!--<form>
                                 <input type="text" name="e-mail" placeholder="Электронная почта">
                                 <br>
                                 <input name="pass" type="password" placeholder="Пароль">
@@ -46,12 +46,12 @@
                             <div class="difficulty">
                             <a href="forgot_password.html">Забыли пароль</a>
                             <a href="new_register.html">Новая регистрация</a>
-                            </div>
+                            </div>-->
                         </li>
                         <li>
                             <span class="visually-hidden">Корзина</span>
                             <a href="basket.html" class="basket">2 товара</a>
-                            <div class="basket-with-goods">
+                            <!--<div class="basket-with-goods">
                                 <table>
                                     <tr>
                                         <td>
@@ -90,7 +90,7 @@
                                 </table>
                                 <p>Итого: 750 руб.</p>
                                 <a href="checkout.html" class="button-background">Оформить заказ</a>
-                            </div>
+                            </div>-->
                         </li>      
                     </ul>     
         </nav>
@@ -104,7 +104,7 @@
       
       <main>
           <div class="breadcrumbs">
-              <ul>                  
+              <ul class="breadcrumbs-list">                  
                   <li><a href="index.html">Главная</a></li>
                   <li><a href="">Каталог</a></li>
                   <li><div class="link-current">Сливочное</div></li>
@@ -114,6 +114,8 @@
           <span class="visually-hidden">Ваши предпочтения</span>
           
               <form class="preferenses" method="get">
+                  <div class="filter">
+                      <div>
                   <label for="sorting">
                      Сортировка:          
                   </label>
@@ -123,17 +125,19 @@
                       <option value="exp_first">сначала дорогие</option>
                       <option value="fatness">по жирности</option>                     
                   </select>
-                  
+                          </div>
+                  <div>
                   <label for="price">
                       Цена: 100 руб. – 500 руб
                   </label>
                       <input type="range" name="price" id="price" min="100" max="500" step="5">
                   <div class="range-control"></div>
+                      </div>
 
                     <!--Там будет как-то так: «цена» это легенд (либо спан). 100 и 500 – это инпуты, куда нужно вбивать цифры. «руб» и дефис между инпутами - это спаны. Сам слайдер – чисто дивы.-->
-                  
+                  <div>
                   <span>Жирность:</span>
-                  <ul>
+                  <ul class="filter-list-fat">
                       <li>
                         <input type="radio" name="fat" id="fat-0">
                         <label for="fat-0">0%</label>
@@ -151,9 +155,10 @@
                         <label for="fat-after30">выше 30%</label>                    
                       </li>
                   </ul>
-                                       
+                   </div>
+                      <div>
                   <label><span>Наполнители:</span>
-                  <ul>
+                  <ul class="filter-list-fillers">
                       <li>
                           <input type="checkbox" name="chocolad" id="filter-chocolad" checked>
                           <label for="filter-chocolad">шоколадные</label>
@@ -176,88 +181,93 @@
                       </li>
                   </ul>
                 </label>
+                          </div>
+                      <div>
                   <button type="submit">Применить</button>
-              </form>           
+                      </div>
+                      </div>
+              </form> 
+              
             
           
-          <section class="range">
-      <h2>Ассортимент</h2>
+          <section class="range-catalog">
+      <h2 class="visually-hidden">Ассортимент</h2>
           <div class="icecream">              
               <img src="img/1_vanilla_ice_cream.jpg" width="267" height="267">        
               <p>310/<span>кг</span></p>
               <a href="vanilla_ice_cream_full.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-              <a href="vanilla_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="vanilla_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream">              
               <img src="img/2_coffee_ice_cream.jpg" width="267" height="267">
               <p>380/<span>кг</span></p>
               <a href="coffee_ice_cream_full.html">Сливочно-кофейное с кусочками шоколада</a>
-              <a href="coffee_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="coffee_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>          
           <div class="icecream">              
               <img src="img/3_strawberry_ice_cream_.jpg" width="267" height="267">
               <p>355/<span>кг</span></p>
               <a href="strawberry_ice_cream_full.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
-              <a href="strawberry_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="strawberry_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream">              
               <img src="img/4_creme_brulee_ice_cream.jpg" width="267" height="267">
               <p>415/<span>кг</span></p>
               <a href="creme_brulee_ice_cream_full.html">Сливочное крем-брюле с карамельной подливкой</a>
-              <a href="creme_brulee_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="creme_brulee_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div> 
           <div class="icecream">              
               <img src="img/5_cranberry_ice_cream.jpg" width="267" height="267">
               <p>325/<span>кг</span></p>
               <a href="cranberry_ice_cream_full.html">Сливочное с брусничным джемом</a>
-              <a href="cranberry_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="cranberry_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream">
               <img src="img/6_blueberry_ice_cream.jpg" width="267" height="267">
               <p>410/<span>кг</span></p>
               <a href="blueberry_ice_cream_full.html">Сливочно-черничное с цельными ягодами черники</a>
-              <a href="blueberry_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="blueberry_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream">
               <img src="img/7_lemon_ice_cream.jpg" width="267" height="267"> 
               <p>375/<span>кг</span></p>
               <a href="lemon_ice_cream_full.html">Сливочно-лимонное с карамельной присыпкой</a>
-              <a href="lemon_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="lemon_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream">
               <img src="img/8_creamy_chocolate_ice_cream.jpg" width="267" height="267"> 
               <p>320/<span>кг</span></p>
               <a href="creamy_chocolate_ice_cream_full.html">Сливочное с шоколадной стружкой</a>
-              <a href="creamy_chocolate_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="creamy_chocolate_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream">
               <img src="img/9_creamy_vanilla_ice_cream.jpg" width="267" height="267"> 
               <p>440/<span>кг</span></p>
               <a href="creamy_vanilla_ice_cream_full.html">Сливочно-ванильное с кусочками шоколада</a>
-              <a href="creamy_vanilla_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="creamy_vanilla_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream">
               <img src="img/10_menthol_ice_cream.jpg" width="267" height="267"> 
               <p>435/<span>кг</span></p>
               <a href="menthol_ice_cream_full.html">Сливочноe с ментоловым сиропом</a>
-              <a href="menthol_ice_cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="menthol_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream">
               <img src="img/11_ice_cream_with_bitter_chocolate.jpg" width="267" height="267"> 
               <p>355/<span>кг</span></p>
               <a href="ice_cream_with_bitter_chocolate_full.html">Сливочное с кусочками черного шоколада</a>
-              <a href="ice_cream_with_bitter_chocolate.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="ice_cream_with_bitter_chocolate.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream">
               <img src="img/12_mint_ice-cream.jpg" width="267" height="267"> 
               <p>420/<span>кг</span></p>
               <a href="mint_ice-cream_full.html">Сливочное с мятным сиропом</a>
-              <a href="mint_ice-cream.html"class="button-background">Быстрый просмотр</a>
+              <!--<a href="mint_ice-cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
      </section>      
               
           <div class="page">
-              <ul>
+              <ul class="page-list">
                 <li class="page-item page-item-current"><a>1</a></li>
                 <li class="page-item"><a href="#">2</a></li>
                 <li class="page-item"><a href="#">3</a></li>
@@ -269,8 +279,8 @@
       
       <footer class="main-footer">
           <section class="footer-social">
-              <h2>Социальные сети</h2>
-              <ul>
+              <h2 class="visually-hidden">Социальные сети</h2>
+              <ul class="footer-social-list">
                 <li><a class="social-button" href="#">Твитер</a></li>
                 <li><a class="social-button" href="#">Инстаграмм</a></li>
                 <li><a class="social-button" href="#">Фейсбук</a></li>
@@ -279,7 +289,7 @@
           </section>
           <section class="about-us">
               <h2 class="visually-hidden">О нас</h2>
-          <ul>
+          <ul class="about-us-list">
               <li><a href="for_suppliers.html">Для поставщиков</a></li>
               <li><a href="about_production.html">О производстве</a></li>
               <li><a href="our_documents.html">Наши документы</a></li>
@@ -287,7 +297,7 @@
           </ul>       
           </section>
           <section class="developer">
-              <h2>Разработчик</h2>
+              <h2 class="visually-hidden">Разработчик</h2>
           <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
           <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2017</a>
               </section>

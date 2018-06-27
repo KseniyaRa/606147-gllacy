@@ -54,7 +54,15 @@ footer /*ширина страницы и ее располодение по у�
 
 .site-navigation,
 .site-navigation-catalog, 
-.user-navigation /*прячем маркеры у списков*/
+.user-navigation,
+.features-list,
+.breadcrumbs-list,
+.filter-list,
+.filter-list-fat, 
+.filter-list-fillers,
+.page ul, 
+.footer-social ul,
+.about-us ul /*прячем маркеры у списков*/
 {
     list-style-type: none;
 }
@@ -78,7 +86,7 @@ footer /*ширина страницы и ее располодение по у�
 .container /*логотип, основное меню*/ {
     display: flex;
     justify-content: flex-start;
-    width: 548px;
+    width: 902px;
     align-items: center;
     height: 63px;
 }
@@ -86,6 +94,17 @@ footer /*ширина страницы и ее располодение по у�
 .main-header-logo /*логотип*/ {
     width: 154px;
     height: 64px;
+}
+
+.site-navigation /*основное меню - раскладка*/ {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    width: 394px;
+    height: 43px;
 }
 
 .site-navigation > li > a /*стилизация меню: "Каталог", "Доставка", "О компании"*/ {
@@ -96,26 +115,28 @@ footer /*ширина страницы и ее располодение по у�
     font-weight: 700;
 }
 
-.site-navigation-catalog-name:hover {
+.site-navigation-catalog-name:hover /*стилизация основного меню при наведении*/ {
     background-color: rgb(247, 246, 243);
     background-size: 87px 32px;
     color: #323232;     
 }
 
-.site-navigation-catalog-name:active {
+.site-navigation-catalog-name:active /*стилизация основного меню при нажатии*/ {
     background-color: rgba(248, 247, 244, 0.988);
     box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
     color: #323232;    
 }
 
-.site-navigation-catalog-name:focus {
+.site-navigation-catalog-name:focus /*стилизация основного меню при нахождении на странице*/ {
     background-color: rgb(208, 112, 88);
     width: 87px;
     height: 32px;
     color: #ffffff;
 }
 
-.site-navigation-catalog {
+.site-navigation-catalog /*всплывающее меню*/ {
+    display: block;
+    position: absolute;
     border-radius: 5px;
     background-color: rgb(248, 247, 244);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -152,6 +173,21 @@ footer /*ширина страницы и ее располодение по у�
 
 .site-navigation-catalog a:visited{
   background-color: #d07058;
+}
+
+.user-navigation /*пользовательское меню*/ {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-self: flex-end;
+    margin: 0;
+    padding: 0;
+    width: 246px;
+    height: 63px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500; 
+    font-family: Roboto, Arial, sans-serif;
 }
 
 .user-navigation input::-webkit-input-placeholder {
@@ -231,7 +267,6 @@ footer /*ширина страницы и ее располодение по у�
     font-weight: 700;
 }
 
-
 .icecream p{
     font-size: 45px;
     line-height: 45px;
@@ -245,7 +280,11 @@ footer /*ширина страницы и ее располодение по у�
     font-size: 30px;
 }
 
-.icecream a{
+.range .icecream-1 a,
+.range .icecream-2 a,
+.range .icecream-3 a,
+.range .icecream-4 a, 
+.range-catalog .icecream a {
     font-size: 16px;
     line-height: 22px;
     color: #ffffff;
@@ -438,114 +477,6 @@ footer /*ширина страницы и ее располодение по у�
 
 /*++++++++++++++++++++++++++++++++++++++++++++++*/
 
-
-
-
-.features {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: space-between; 
-    flex-wrap: wrap;
-    padding: 0 27px;
-    margin-bottom: 40px;
-    height: 307px;    
-    box-sizing: inherit;    
-}
-
-.features-title {
-    margin: auto;
-}
-
-.features-list {
-    margin: auto;
-}
-
-.blog-subscription {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 27px;
-    margin-bottom: 40px;
-    height: 222px;    
-    box-sizing: inherit;    
-}
-
-.blog {
-    margin: auto;
-}
-
-.subscription {
-    margin: auto;
-}
-
-.map-contacts {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-bottom: 18px;
-    height: 433px;    
-    box-sizing: inherit;  
-    background-image: url("map.png");
-    background-size: 100% 430px;
-}
-
-.contacts {
-    margin: auto;
-}
-
-.main-footer {
-    display: flex;    
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 27px; 
-    margin-bottom: 26px;
-    height: 62px;    
-    box-sizing: inherit;    
-}
-
-.footer-social {
-    margin: auto;
-}
-
-.about-us {
-    margin: auto;
-}
-
-.developer {
-    margin: auto;
-}
-
-
-
-/*сделано*/
-
-
-.site-navigation {
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    margin: 0;
-    padding: 0;
-    width: 394px;
-    height: 63px;
-}
-
-
-
-.user-navigation {
-    display: flex;
-    width: 293px;
-    justify-content: flex-end;
-    align-items: baseline;
-    padding-left: 10px;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500; 
-    font-family: Roboto, Arial, sans-serif;
-}
-
 .user-navigation li {
     margin: auto;
     width: 103px;
@@ -582,12 +513,11 @@ footer /*ширина страницы и ее располодение по у�
 }
 
 .header-info {
-    display: block;
     position: absolute;
     margin: 0;
     padding: 0;
     top: 72px;
-    right: 27px;
+    right: 100px;
     width: 168px;
     height: 45px;
     text-align: right;
@@ -646,7 +576,6 @@ footer /*ширина страницы и ее располодение по у�
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 27px;
     margin-bottom: 40px;
     height: 320px;    
     box-sizing: inherit;    
@@ -696,12 +625,209 @@ footer /*ширина страницы и ее располодение по у�
     background: url("/img/socolad_background_.jpg") no-repeat;
 }
 
-.range {
+.range /*флекс для ассортимента на главной странице*/ {
+    display: flex;
+    justify-content: space-between;
+    width: 1146px;
+    height: 323px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    box-sizing: inherit; 
+}
+
+.hit {
+    position: absolute;
+    top: 1000px;
+    background-color: crimson;
+}
+
+.icecream {
+    width: 264px;
+    height: 323px;
+    margin: 0;
+    padding: 0;
+}
+
+.features-list {
+    display: flex;
+    justify-content: center;
+    align-content: space-between; 
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    height: 223px;    
+    box-sizing: inherit;    
+    width: 1146;
+}
+
+.features .features-list li {
+    width: 560px;
+}
+
+.features-title {
+    width: 1146px;
+    margin: 0 auto;
+}
+
+.blog-subscription {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 27px;
     margin-bottom: 40px;
-    height: 323px;    
+    height: 222px;    
+    box-sizing: inherit;    
+}
+
+.blog,
+.subscription {
+    margin: auto;
+    width: 560px;
+    height: 222px;
+}
+
+.map-contacts {
+    margin: 0 auto;
+    margin-bottom: 18px;
+    height: 433px;    
+    box-sizing: inherit;  
+    background-image: url("/img/map.png");
+    position: relative;
+}
+
+.contacts {
+    width: 308px;
+    height: 302px;
+    float: right;
+    background-color: #fffffe;
+    border-radius: 30px;
+    position: absolute;
+    right: 27px;
+    top: 69px;
+}
+
+.main-footer /* флекс для подвала */ {
+    display: flex;    
+    margin-bottom: 26px;
+    height: 83px;    
+    box-sizing: inherit;    
+}
+
+.footer-social {
+    margin: auto;
+}
+
+.about-us {
+    margin: auto;
+}
+
+.developer {
+    margin: auto;
+}
+
+.breadcrumbs-list {
+    display: flex;
+    width: 224px;
+    justify-content: space-between
+}
+
+.filter /*сетка на флексах для фильтров в каталоге*/{
+    display: flex;
+    width: 864px;
+    height: 136px;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.filter div:nth-child(1) /*сортировка*/ {
+    width: 195px;
+    height: 66px;
+    margin: 0;
+    padding: 0;    
+}
+
+.filter div:nth-child(2) /*цена*/ {
+    width: 224px;
+    height: 66px;
+}
+
+.filter div:nth-child(3) /*жирность*/ {
+    width: 422px;
+    height: 66px;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-list-fat /*флекс для жирности*/ {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter div:nth-child(4) /*наполнители*/ {
+    width: 704px;
+    height: 58px;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-list-fillers /*флекс для наполнителей*/ {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter div:nth-child(5) /*кнопка "применить"*/ {
+    width: 150px;
+    height: 41px;
+}
+
+.range-catalog /*флекс для ассортимента на странице каталога*/ {
+    display: flex;
+    justify-content: space-between;
+    width: 1146px;
+    height: 1096px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
     box-sizing: inherit; 
+}
+
+.icecream /*задаем ширину и высоту блока с мороженым (картинка + цена + полпись*/ {
+    width: 267px;
+    height: 329px;
+}
+
+.icecream p,
+.icecream a /* убираем отступы у абзацев и ссылок */ {
+    padding: 0;
+    margin: 0;
+}
+
+.page-list /* флекс для страниц каталога */ {
+    display: flex;
+    width: 203px;
+    height: 36px;
+    justify-content: space-around;
+    margin-left: 955px;
+} 
+
+.footer-social-list /* флекс для соц. сетей */ {
+    display: flex;
+    width: 189px;
+    height: 41px;
+    justify-content: space-between;
+}
+
+.about-us-list /* флекс для ссылок "о нас" */ {
+    display: flex;
+    width: 312px;
+    height: 47px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.developer /* флекс для разработчика */ {
+    display: flex;
+    width: 194px;
+    height: 64px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
