@@ -11,11 +11,12 @@
   <body>
       <header class="main-header">
         <nav class="main-navigation">
+            <div class="container">
             <a class="main-header-logo">
                 <img src="img/logo_.png" width="154" height="64" alt="Логотип магазина мороженого Глэйси">
-            </a>         
+            </a>        
                     <ul class="site-navigation">
-                        <li>
+                       <li>
                             <a href="#" class="site-navigation-catalog-name">Каталог</a>
                             <!--<ul class="site-navigation-catalog">
                                 <li><a href="novelties.html">Новинки</a></li>
@@ -26,13 +27,14 @@
                             </ul>-->
                         </li>
                         <li><a href="shipping_payment.html">Доставка и оплата</a></li>
-                        <li><a href="about_us.html">О компании</a></li>  
+                        <li><a href="about_us.html" class="site-navigation-catalog-about-us">О Компании</a></li> 
                     </ul>
+                </div>
                     <ul class="user-navigation">
                         <li>                            
-                          <span class="visually-hidden">Поиск</span>
-                          <!--<form method="get">
-                           <input type="search" name="search" class="search user-navigation-pop-up" placeholder="Что ищем?">
+                          <!--<span class="visually-hidden">Поиск</span>
+                          <form method="get">
+                           <input type="search" name="search" placeholder="Что ищем?">
                           </form>-->
                         </li>
                         <li>
@@ -98,7 +100,7 @@
           <div class="header-info">
           <span class="visually-hidden">График работы и контактный телефон</span>
           <p>С 10 до 20, ежедневно</p>
-          <a href="tel:+781245025258">812 450-25-25</a>
+          <a href="tel:+781245025258">8 812 450-25-25</a>
           </div>
       </header>
       
@@ -280,7 +282,7 @@
       <footer class="main-footer">
           <section class="footer-social">
               <h2 class="visually-hidden">Социальные сети</h2>
-              <ul class="footer-social-list">
+              <ul>
                 <li><a class="social-button" href="#">Твитер</a></li>
                 <li><a class="social-button" href="#">Инстаграмм</a></li>
                 <li><a class="social-button" href="#">Фейсбук</a></li>
@@ -289,7 +291,7 @@
           </section>
           <section class="about-us">
               <h2 class="visually-hidden">О нас</h2>
-          <ul class="about-us-list">
+          <ul>
               <li><a href="for_suppliers.html">Для поставщиков</a></li>
               <li><a href="about_production.html">О производстве</a></li>
               <li><a href="our_documents.html">Наши документы</a></li>
@@ -299,6 +301,8 @@
           <section class="developer">
               <h2 class="visually-hidden">Разработчик</h2>
           <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
-          <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2017</a>
+          <span>Сделано в </span>
+              <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+              <span> © 2017</span>
               </section>
       </footer>

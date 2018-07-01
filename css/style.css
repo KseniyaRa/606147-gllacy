@@ -6,6 +6,12 @@ body /*основные стили для страниц*/{
     padding: 0;
     margin: 0;
     background-color: #849d8f;
+    
+    background-image: url("../img/gllacy-index-1200.jpg");
+    background-repeat: no-repeat;
+    background-position: center top 0;
+    background-size: auto auto;
+    
     color: #ffffff;
     font-family: Roboto, Arial, sans-serif; 
     font-weight: 400;    
@@ -29,7 +35,7 @@ footer /*ширина страницы и ее располодение по у�
     overflow: hidden;
 }
 
-.button-background /*фон кнопок в обычном состоянии*/ { 
+/*.button-background /*фон кнопок в обычном состоянии  { 
     color: #ffffff;
     font-weight: 700;
     text-decoration: none;
@@ -38,7 +44,7 @@ footer /*ширина страницы и ее располодение по у�
     background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
     border-radius: 30px;
-}
+}*/
 
 .button-background:hover /*фон кнопок при наведении*/ { /*стилизация кнопок при наведении*/    
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
@@ -72,9 +78,13 @@ footer /*ширина страницы и ее располодение по у�
     flex-direction: column;
     align-items: center;
     width: 1146px;
-    height: 600;
-    margin: 10px auto 40px;
+    height: 610px;
+    margin: 10px auto 0;
     box-sizing: inherit;
+    background-image: url("../img/ice_cream_1.png");
+    background-repeat: no-repeat;
+    background-position: right 50px top -15px;
+    background-size: 1045px 881px;   
 }
 
 .main-navigation /*Логотип, основное меню, пользовательское меню*/ {
@@ -98,12 +108,9 @@ footer /*ширина страницы и ее располодение по у�
 
 .site-navigation /*основное меню - раскладка*/ {
     display: flex;
-    justify-content: space-around;
-    align-content: center;
     margin: 0;
-    padding: 0;
+    padding: 0;    ;
     padding-top: 20px;
-    width: 394px;
     height: 43px;
 }
 
@@ -114,6 +121,16 @@ footer /*ширина страницы и ее располодение по у�
     font-family: Roboto, Arial, sans-serif;
     font-weight: 700;
 }
+
+.site-navigation-catalog-name {
+    padding-left: 23px;
+    padding-right: 28px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #323232;
+    font-weight: 700;
+    font-family: Roboto, Arial, sans-serif;
+} 
 
 .site-navigation-catalog-name:hover /*стилизация основного меню при наведении*/ {
     background-color: rgb(247, 246, 243);
@@ -143,16 +160,6 @@ footer /*ширина страницы и ее располодение по у�
     background-size: 143px 171px;
 }
 
-.site-navigation-catalog li:first-of-type a {
-    font-size: 14px;
-    line-height: 16px;
-    color: #323232;
-    font-weight: 700;
-    text-decoration: none;
-    font-family: Roboto, Arial, sans-serif;
-    background-size: 143px 28px;
-}
-
 .site-navigation-catalog li:not(:first-of-type) a {
     font-size: 14px;
     line-height: 16px;
@@ -175,6 +182,10 @@ footer /*ширина страницы и ее располодение по у�
   background-color: #d07058;
 }
 
+.site-navigation-catalog-about-us /*левый отступ для выравнивая "О компании" */ {
+    padding-left: 29px;
+}
+
 .user-navigation /*пользовательское меню*/ {
     display: flex;
     justify-content: space-between;
@@ -182,12 +193,13 @@ footer /*ширина страницы и ее располодение по у�
     align-self: flex-end;
     margin: 0;
     padding: 0;
-    width: 246px;
-    height: 63px;
+    width: 250px;
+    height: 35px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500; 
     font-family: Roboto, Arial, sans-serif;
+    align-self: center;
 }
 
 .user-navigation input::-webkit-input-placeholder {
@@ -197,9 +209,71 @@ footer /*ширина страницы и ее располодение по у�
     font-weight: 400;
 }
 
+.user-navigation li {
+    margin: auto;
+}
+
+.user-navigation li a /* стилизация текста ссылок в пользовательском меню (вход и корзина) */ {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;    
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Roboto, Arial, sans-serif;
+    display: block;
+    margin-top: 7px;
+    margin-left: 45px;
+}
+
+.user-navigation .user-navigation-search /* фон для кнопки поиска */ {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.user-navigation .loupe /* значок лупы для кнопки поиска */ {
+    background-image: url("../img/loupe_main.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.user-navigation .user-navigation-entrance /* фон для кнопки входа */ {
+    width: 92px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+.user-navigation .user-navigation-basket /* фон для кнопки корзины */ {
+    width: 101px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 17px;
+    margin: 0;
+    padding: 0;
+}
+
+.user-navigation li:nth-child(2) /* значок входа для кнопки входа */ {
+    background-image: url("../img/entrance_main.svg");
+    background-repeat: no-repeat;
+    background-position: 18px 6px;
+}
+
+.user-navigation li:nth-child(3) /* значок корзины для кнопки корзины */ {    
+    background-image: url("../img/basket_main.svg");
+    background-repeat: no-repeat;
+    background-position: 18px 6px;
+}
+
 .user-navigation input, 
 .subscription input, 
-.modal input {
+.modal input /* стилизация текста, вводимого в форму пользователем */ {
     font-size: 16px;
     line-height: 24px;
     color: #323232;
@@ -475,43 +549,6 @@ footer /*ширина страницы и ее располодение по у�
     font-weight: 400;
 }
 
-/*++++++++++++++++++++++++++++++++++++++++++++++*/
-
-.user-navigation li {
-    margin: auto;
-    width: 103px;
-    height: 33px;
-    padding-left: 25px;
-    padding-top: 15px;
-}
-
-.user-navigation a {
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 500;    
-    color: #ffffff;
-    text-decoration: none;
-    font-family: Roboto, Arial, sans-serif;
-}
-
-.user-navigation li:nth-child(1) {
-    background-image: url("/img/loupe_main.svg");
-    background-repeat: no-repeat;
-    background-position: left;
-}
-
-.user-navigation li:nth-child(2) {
-    background-image: url("/img/entrance_main.svg");
-    background-repeat: no-repeat;
-    background-position: left;    
-}
-
-.user-navigation li:nth-child(3) {    
-    background-image: url("/img/basket_main.svg");
-    background-repeat: no-repeat;
-    background-position: left;
-}
-
 .header-info {
     position: absolute;
     margin: 0;
@@ -535,6 +572,7 @@ footer /*ширина страницы и ее располодение по у�
 .header-info p {
     font-size: 14px;
     line-height: 16px;
+    padding-bottom: 5px;
 }
 
 .header-info a{
@@ -542,21 +580,12 @@ footer /*ширина страницы и ее располодение по у�
     line-height: 24px;   
 }
 
-.slide1 {
-    width: 1146px;
-    height: 532px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    background-image: url("/img/ice_cream_1.png");
-    background-repeat: no-repeat;
-}
-
-.slide1 p {
+.slide1 p /* подпись в слайдере */ {
     display: block;
+    position: relative;
     width: 673px;
     height: 115px;
+    top: 260px;
 }
 
 .slider p{
@@ -570,22 +599,43 @@ footer /*ширина страницы и ее располодение по у�
     line-height: 44px;
     background-size: 280px 64px;  
     font-weight: 700;
+    color: #ffffff;
+    text-align: center;    
+}
+
+.slider .button-slider /* кнопка "Давайте оба" в слайдере */ {
+    width: 280px;
+    height: 55px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);     
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+    border-radius: 30px;
+    padding-top: 5px;
+    display: block;
+    position: relative;
+    top: 235px;
+    left: 200px;   
 }
 
 .action {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px;
+    justify-content: space-around;
+    /*margin-bottom: 40px;*/
     height: 320px;    
-    box-sizing: inherit;    
+    box-sizing: inherit; 
+    padding: 0;
+    margin-top: -18px;    
 }
 
 .action-first,
 .action-second {
     width: 560px;
     height: 230px;
-    margin: auto;
+    /*margin: auto;*/
 }
 
 .action a {
@@ -617,12 +667,14 @@ footer /*ширина страницы и ее располодение по у�
 }
 
 .action-first {
-    background-image: url("/img/crimson_background_.jpg");
+    background-image: url("../img/crimson_background_.jpg");
     background-repeat: no-repeat;
+    margin-left: 14px;
 } 
 
 .action-second {
-    background: url("/img/socolad_background_.jpg") no-repeat;
+    background: url("../img/socolad_background_.jpg") no-repeat;
+    margin-right: 14px;
 }
 
 .range /*флекс для ассортимента на главной странице*/ {
@@ -632,7 +684,18 @@ footer /*ширина страницы и ее располодение по у�
     height: 323px;
     margin: 0 auto;
     margin-bottom: 40px;
-    box-sizing: inherit; 
+    box-sizing: inherit;
+}
+
+.range > div /*размеры карточек с мороженым */ {
+    width: 275px;
+    height: 332px;
+    margin: 0;
+    padding-right: 30px;
+}
+
+.range > div:last-child /* убираем отступ у последней карточки */ {
+    padding: 0;
 }
 
 .hit {
@@ -690,7 +753,7 @@ footer /*ширина страницы и ее располодение по у�
     margin-bottom: 18px;
     height: 433px;    
     box-sizing: inherit;  
-    background-image: url("/img/map.png");
+    background-image: url("../img/map.png");
     position: relative;
 }
 
@@ -784,8 +847,7 @@ footer /*ширина страницы и ее располодение по у�
     justify-content: space-between;
     width: 1146px;
     height: 1096px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    margin: 0 auto 40px;
     flex-wrap: wrap;
     box-sizing: inherit; 
 }
