@@ -341,48 +341,6 @@ footer /*ширина страницы и ее располодение по у�
     font-weight: 700;
 }
 
-.icecream p{
-    font-size: 45px;
-    line-height: 45px;
-    color: rgb(255, 255, 255);    
-    text-align: left;
-    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
-    font-weight: 700;
-}
-
-.icecream span {
-    font-size: 30px;
-}
-
-.range .icecream-1 a,
-.range .icecream-2 a,
-.range .icecream-3 a,
-.range .icecream-4 a, 
-.range-catalog .icecream a {
-    font-size: 16px;
-    line-height: 22px;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.icecream a:last-of-type {
-    font-size: 18px;
-}
-
-.features h2{
-    font-size: 24px;
-    line-height: 30px;
-    color: #323232;
-    font-weight: 500;
-}
-
-.features li{
-   font-size: 16px;
-   line-height: 22px;
-   color: #323232;
-   font-weight: 400;  
-}
-
 .blog h1{
     font-size: 16px;
     line-height: 22px;
@@ -606,6 +564,11 @@ footer /*ширина страницы и ее располодение по у�
 .slider .button-slider /* кнопка "Давайте оба" в слайдере */ {
     width: 280px;
     height: 55px;
+    padding-top: 5px;
+    display: block;
+    position: relative;
+    top: 235px;
+    left: 200px;
     font-weight: 700;
     text-decoration: none;
     text-align: center;
@@ -613,18 +576,12 @@ footer /*ширина страницы и ее располодение по у�
     background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
     border-radius: 30px;
-    padding-top: 5px;
-    display: block;
-    position: relative;
-    top: 235px;
-    left: 200px;   
 }
 
-.action {
+.action /* флекс для акций */ {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /*margin-bottom: 40px;*/
     height: 320px;    
     box-sizing: inherit; 
     padding: 0;
@@ -632,50 +589,70 @@ footer /*ширина страницы и ее располодение по у�
 }
 
 .action-first,
-.action-second {
+.action-second /* задаем размеры карточек с акциями */ {
     width: 560px;
     height: 230px;
-    /*margin: auto;*/
 }
 
-.action a {
+.action .button-background /* стилизация кнопок в акциях */ {
     display: block;
-    float: right;
+    width: 167px;
+    height: 35px;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);     
+    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+    border-radius: 30px;
+    padding-top: 10px;
+    margin-left: 375px;
+    margin-top: 44px;
+}
+
+.action .action-second .button-background /* изменение ширины и отступов для кнопки "Хочу шоколадки" */ {
+     width: 190px;
+     margin-left: 350px;
+}
+
+.action a /* стилизация ссылок в акциях */ {    
     font-size: 18px;
     line-height: 24px;
     font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
 }
     
-.action h2 {
+.action h2 /* стилизация заголовков в акциях */ {
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
+    display: block;
+    padding: 17px 0 0 19px;
+    margin: 0;
 }
 
-.action p {
+.action p /* стилизация текста в акциях */ {
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
+    display: block;
+    padding: 15px 0 0 20px;
+    margin: 0;
 }
 
-.action-first a {   
-    background-size: 165px 46px;
-}
-
-.action-second a{
-    background-size: 189px 45px; 
-}
-
-.action-first {
+.action-first /* добавляем фон в первую акцию */ {
     background-image: url("../img/crimson_background_.jpg");
     background-repeat: no-repeat;
     margin-left: 14px;
+    border-radius: 20px;
 } 
 
-.action-second {
+.action-second /* добавляем фон во вторую акцию */ {
     background: url("../img/socolad_background_.jpg") no-repeat;
     margin-right: 14px;
+    border-radius: 20px;
 }
+
+/* Ассортимент */
 
 .range /*флекс для ассортимента на главной странице*/ {
     display: flex;
@@ -685,6 +662,7 @@ footer /*ширина страницы и ее располодение по у�
     margin: 0 auto;
     margin-bottom: 40px;
     box-sizing: inherit;
+    margin-top: -6px;
 }
 
 .range > div /*размеры карточек с мороженым */ {
@@ -694,32 +672,178 @@ footer /*ширина страницы и ее располодение по у�
     padding-right: 30px;
 }
 
+.range div img /* убираем белые углы у всех карточек с мороженым */ {
+    border-radius: 133px;
+}
+
 .range > div:last-child /* убираем отступ у последней карточки */ {
     padding: 0;
 }
 
-.hit {
+.range .icecream-1::before,
+.range .icecream-2::before,
+.range .icecream-3::before,
+.range .icecream-4::before /* позиционирование надписи Хит */ {
+    content: "";
+    display: block;
     position: absolute;
-    top: 1000px;
-    background-color: crimson;
+    top: 915px;
+    left: 100px;
+    background-image: url(../img/hit_.png);
+    background-position: 0 0;
+    width: 61px;
+    height: 61px;
+    z-index: 1;
 }
 
-.icecream {
-    width: 264px;
-    height: 323px;
+.range .icecream-2::before /* смещение надписи Хит для второго элемента */ {
+    left: 394px;
+}
+
+.range .icecream-3::before /* смещение надписи Хит для третьего элемента */ {
+    left: 688px;
+}
+
+.range .icecream-4::before /* смещение надписи Хит для четвертого элемента */ {
+    left: 982px;
+}
+
+.icecream p /* стилизация цены в карточках с мороженым */ {
+    font-size: 45px;
+    line-height: 45px;
+    color: rgb(255, 255, 255);    
+    text-align: left;
+    text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+    font-weight: 700;
     margin: 0;
     padding: 0;
+    position: absolute;
+    top: 1125px;
 }
 
-.features-list {
+.icecream span  /* стилизация "кг" в карточках с мороженым */ {
+    font-size: 30px;
+}
+
+.range .icecream a, 
+.range-catalog .icecream a /* стилизация ссылок с названиями в карточках с мороженым */ {
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.range .icecream-2, 
+.range .icecream-3,
+.range .icecream-4 /* выравниваем второе мороженое */ {
+    margin-left: -4px;
+}
+
+/*.icecream a:last-of-type /* кнопка быстрый просмотр  {
+    font-size: 18px;
+}*/
+
+/* Преимущества */
+
+.features /* фон для блока с преимуществами */ {
+    width: 1146px;
+    height: 307px;
+    color: #323232;
+    background-color: #eee0c4;
+    background-image: url(../img/glacey_background_store_.jpg);
+    border-radius: 17px;
+}
+
+.features-list /* флекс для преимуществ */ {
     display: flex;
-    justify-content: center;
-    align-content: space-between; 
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    height: 223px;    
+    flex-wrap: wrap;     
     box-sizing: inherit;    
-    width: 1146;
+    width: 1049;
+    height: 175px; 
+    margin: 0 auto;
+}
+
+.features-title /*заголовок в преимуществах */ {
+    font-size: 24px;
+    line-height: 30px;
+    color: #323232;
+    font-weight: 500;
+    display: block;
+    padding-top: 23px;
+    padding-left: 41px;
+}
+
+.features .features-ice-cream-list /* картинка мороженки */ {
+    background-image: url("../img/small_ice_cream.png");
+    background-repeat: no-repeat;
+    background-position: 5px 8px;
+    width: 539px;
+    height: 91px;
+}
+
+.features .features-ice-cream /* первое преимущество */ {
+    margin: 0;
+    padding: 0;
+    width: 484px;
+    height: 64px;
+    margin-left: 64px;
+    margin-top: 22px;
+}
+
+.features .features-cow-list /* картинка коровы */ {
+    background-image: url("../img/cow.png");
+    background-repeat: no-repeat;
+    background-position: 11px 8px;
+    width: 539px;
+    height: 91px;
+}
+
+.features .features-cow /* второе преимущество */ {
+    margin: 0;
+    padding: 0;
+    width: 484px;
+    height: 64px;
+    margin-left: 70px;
+    margin-top: 22px;
+}
+
+.features .features-leaf-list /* картинка листика */ {
+    background-image: url("../img/leaf.png");
+    background-repeat: no-repeat;
+    background-position: 6px 6px;
+    width: 539px;
+    height: 91px;
+}
+
+.features .features-leaf /* третье преимущество */ {
+    margin: 0;
+    padding: 0;
+    width: 484px;
+    height: 64px;
+    margin-left: 63px;
+    margin-top: 20px;
+}
+
+.features .features-thermometer-list /* картинка термометра */ {
+    background-image: url("../img/thermometer.png");
+    background-repeat: no-repeat;
+    background-position: 11px 6px;
+    width: 539px;
+    height: 91px;
+}
+
+.features .features-thermometer /* четвертое преимущество */ {
+    margin: 0;
+    padding: 0;
+    width: 484px;
+    height: 64px;
+    margin-left: 63px;
+    margin-top: 20px;
 }
 
 .features .features-list li {
@@ -730,6 +854,16 @@ footer /*ширина страницы и ее располодение по у�
     width: 1146px;
     margin: 0 auto;
 }
+
+.features li{
+   font-size: 16px;
+   line-height: 22px;
+   color: #323232;
+   font-weight: 400;  
+}
+
+
+
 
 .blog-subscription {
     display: flex;
