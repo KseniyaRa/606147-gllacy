@@ -7,11 +7,6 @@ body /*основные стили для страниц*/{
     margin: 0;
     background-color: #849d8f;
     
-    background-image: url("../img/gllacy-index-1200.jpg");
-    background-repeat: no-repeat;
-    background-position: center top 0;
-    background-size: auto auto;
-    
     color: #ffffff;
     font-family: Roboto, Arial, sans-serif; 
     font-weight: 400;    
@@ -19,7 +14,7 @@ body /*основные стили для страниц*/{
 
 header,
 main,
-footer /*ширина страницы и ее располодение по уентру*/ {
+footer /*ширина страницы и ее располодение по центру*/ {
     width: 1200px;
     margin: 0 auto;
 }
@@ -78,18 +73,34 @@ footer /*ширина страницы и ее располодение по у�
     flex-direction: column;
     align-items: center;
     width: 1146px;
-    height: 610px;
+    min-height: 610px;
     margin: 10px auto 0;
     box-sizing: inherit;
     background-image: url("../img/ice_cream_1.png");
     background-repeat: no-repeat;
-    background-position: right 50px top -15px;
-    background-size: 1045px 881px;   
+    background-position: right 50px top -11px;
+    background-size: 1045px 881px;
+    
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.main-header::before,
+.main-header::after /* для кнопок слайдера */ {
+  content: "";
+  visibility: hidden;
+}
+
+.main-header::before /* вторая картинка слайдера */ {
+  background-image: url("../img/ice_cream_2.png");
+}
+
+.main-header::after /* третья картинка слайдера */ {
+  background-image: url("../img/ice_cream_3.png");
 }
 
 .main-navigation /*Логотип, основное меню, пользовательское меню*/ {
     width: 1146px;
-    height: 63px;    
+    min-height: 63px;    
     display: flex;
 }
 
@@ -98,7 +109,7 @@ footer /*ширина страницы и ее располодение по у�
     justify-content: flex-start;
     width: 902px;
     align-items: center;
-    height: 63px;
+    min-height: 63px;
 }
 
 .main-header-logo /*логотип*/ {
@@ -111,7 +122,7 @@ footer /*ширина страницы и ее располодение по у�
     margin: 0;
     padding: 0;    ;
     padding-top: 20px;
-    height: 43px;
+    min-height: 43px;
 }
 
 .site-navigation > li > a /*стилизация меню: "Каталог", "Доставка", "О компании"*/ {
@@ -194,7 +205,7 @@ footer /*ширина страницы и ее располодение по у�
     margin: 0;
     padding: 0;
     width: 250px;
-    height: 35px;
+    min-height: 35px;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500; 
@@ -227,7 +238,7 @@ footer /*ширина страницы и ее располодение по у�
 
 .user-navigation .user-navigation-search /* фон для кнопки поиска */ {
     width: 32px;
-    height: 32px;
+    min-height: 32px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     margin: 0;
@@ -243,7 +254,7 @@ footer /*ширина страницы и ее располодение по у�
 
 .user-navigation .user-navigation-entrance /* фон для кнопки входа */ {
     width: 92px;
-    height: 35px;
+    min-height: 35px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 17px;
     margin: 0;
@@ -393,12 +404,6 @@ footer /*ширина страницы и ее располодение по у�
     font-weight: 700;
 }
 
-.contacts a:last-child {
-   color: #fefefe; 
-   background-size: 252px 44px;
-    font-weight: 700;
-}
-
 .main-footer a {
     font-size: 13px;
     line-height: 18px;
@@ -508,14 +513,15 @@ footer /*ширина страницы и ее располодение по у�
 }
 
 .header-info {
-    position: absolute;
+    display: block;
+    position: relative;
     margin: 0;
-    padding: 0;
-    top: 72px;
-    right: 100px;
+    padding: 0;    
     width: 168px;
-    height: 45px;
+    min-height: 45px;
     text-align: right;
+    right: -490px;
+    top: 0;
 }
 
 .header-info p,
@@ -538,51 +544,124 @@ footer /*ширина страницы и ее располодение по у�
     line-height: 24px;   
 }
 
-.slide1 p /* подпись в слайдере */ {
-    display: block;
+/* Слайдер */
+
+.slider {
     position: relative;
-    width: 673px;
-    height: 115px;
-    top: 260px;
+    padding-top: 321px;
+    text-align: center;
+    color: #ffffff;
+    width: inherit;
 }
 
-.slider p{
+.slider-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide {
+    display: none;
+    margin-top: -47px;
+}
+
+.slide-title /* подпись в слайдере */ {
+    width: 673px;
     font-size: 60px;
     line-height: 60px;
     font-weight: 700;
+    margin: 0 auto;
+    margin-bottom: 29px;    
 }
 
-.slider a {
-    font-size: 32px;
-    line-height: 44px;
-    background-size: 280px 64px;  
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;    
+.button {
+  display: inline-block;
+  padding: 12px 44px;
+
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: top;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  border: none;
+
+  cursor: pointer;
 }
 
-.slider .button-slider /* кнопка "Давайте оба" в слайдере */ {
-    width: 280px;
-    height: 55px;
-    padding-top: 5px;
-    display: block;
-    position: relative;
-    top: 235px;
-    left: 200px;
-    font-weight: 700;
-    text-decoration: none;
-    text-align: center;
-    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);     
-    background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
-    border-radius: 30px;
+.button:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
+
+.button:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 21px;
+  left: 0;
+  z-index: 20;
+  
+  font-size: 0;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+
+  vertical-align: top;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#product-1:checked ~ .main-header {
+  background-color: #849d8f;
+  background-image: url("../img/ice_cream_1.png");
+}
+
+#product-2:checked ~ .main-header {
+  background-color: #8996a6;
+  background-image: url("../img/ice_cream_2.png");
+}
+
+#product-3:checked ~ .main-header {
+  background-color: #9d8b84;
+  background-image: url("../img/ice_cream_3.png");
+}
+
+#product-1:checked ~ .main-header #slide1,
+#product-2:checked ~ .main-header #slide2,
+#product-3:checked ~ .main-header #slide3 {
+  display: block;
+}
+
+#product-1:checked ~ .main-header label[for="product-1"],
+#product-2:checked ~ .main-header label[for="product-2"],
+#product-3:checked ~ .main-header label[for="product-3"] {
+  background-color: #ffffff;
+}
+
 
 .action /* флекс для акций */ {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 320px;    
+    min-height: 320px;    
     box-sizing: inherit; 
     padding: 0;
     margin-top: -18px;    
@@ -591,7 +670,7 @@ footer /*ширина страницы и ее располодение по у�
 .action-first,
 .action-second /* задаем размеры карточек с акциями */ {
     width: 560px;
-    height: 230px;
+    min-height: 230px;
 }
 
 .action .button-background /* стилизация кнопок в акциях */ {
@@ -604,7 +683,7 @@ footer /*ширина страницы и ее располодение по у�
     box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
     border-radius: 30px;
     padding-top: 10px;
-    margin-left: 375px;
+    margin-left: 373px;
     margin-top: 44px;
 }
 
@@ -658,7 +737,7 @@ footer /*ширина страницы и ее располодение по у�
     display: flex;
     justify-content: space-between;
     width: 1146px;
-    height: 323px;
+    min-height: 323px;
     margin: 0 auto;
     margin-bottom: 40px;
     box-sizing: inherit;
@@ -667,9 +746,10 @@ footer /*ширина страницы и ее располодение по у�
 
 .range > div /*размеры карточек с мороженым */ {
     width: 275px;
-    height: 332px;
+    min-height: 332px;
     margin: 0;
     padding-right: 30px;
+    position: relative;
 }
 
 .range div img /* убираем белые углы у всех карточек с мороженым */ {
@@ -687,25 +767,11 @@ footer /*ширина страницы и ее располодение по у�
     content: "";
     display: block;
     position: absolute;
-    top: 915px;
-    left: 100px;
     background-image: url(../img/hit_.png);
     background-position: 0 0;
     width: 61px;
     height: 61px;
     z-index: 1;
-}
-
-.range .icecream-2::before /* смещение надписи Хит для второго элемента */ {
-    left: 394px;
-}
-
-.range .icecream-3::before /* смещение надписи Хит для третьего элемента */ {
-    left: 688px;
-}
-
-.range .icecream-4::before /* смещение надписи Хит для четвертого элемента */ {
-    left: 982px;
 }
 
 .icecream p /* стилизация цены в карточках с мороженым */ {
@@ -718,7 +784,8 @@ footer /*ширина страницы и ее располодение по у�
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 1125px;
+    bottom: 73px;
+    z-index: 1; 
 }
 
 .icecream span  /* стилизация "кг" в карточках с мороженым */ {
@@ -751,21 +818,15 @@ footer /*ширина страницы и ее располодение по у�
 /* Преимущества */
 
 .features /* фон для блока с преимуществами */ {
-    width: 1146px;
-    height: 307px;
+    margin: -10px 0 36px 26px;
+    padding: 0;  
     color: #323232;
     background-color: #eee0c4;
-    background-image: url(../img/glacey_background_store_.jpg);
+    background-image: url("../img/glacey_background_store_.jpg");
+    background-position: center;
     border-radius: 17px;
-}
-
-.features-list /* флекс для преимуществ */ {
-    display: flex;
-    flex-wrap: wrap;     
-    box-sizing: inherit;    
-    width: 1049;
-    height: 175px; 
-    margin: 0 auto;
+    width: 1146px;    
+    min-height: 304px;
 }
 
 .features-title /*заголовок в преимуществах */ {
@@ -774,256 +835,391 @@ footer /*ширина страницы и ее располодение по у�
     color: #323232;
     font-weight: 500;
     display: block;
-    padding-top: 23px;
-    padding-left: 41px;
-}
-
-.features .features-ice-cream-list /* картинка мороженки */ {
-    background-image: url("../img/small_ice_cream.png");
-    background-repeat: no-repeat;
-    background-position: 5px 8px;
-    width: 539px;
-    height: 91px;
-}
-
-.features .features-ice-cream /* первое преимущество */ {
-    margin: 0;
-    padding: 0;
-    width: 484px;
-    height: 64px;
-    margin-left: 64px;
-    margin-top: 22px;
-}
-
-.features .features-cow-list /* картинка коровы */ {
-    background-image: url("../img/cow.png");
-    background-repeat: no-repeat;
-    background-position: 11px 8px;
-    width: 539px;
-    height: 91px;
-}
-
-.features .features-cow /* второе преимущество */ {
-    margin: 0;
-    padding: 0;
-    width: 484px;
-    height: 64px;
-    margin-left: 70px;
-    margin-top: 22px;
-}
-
-.features .features-leaf-list /* картинка листика */ {
-    background-image: url("../img/leaf.png");
-    background-repeat: no-repeat;
-    background-position: 6px 6px;
-    width: 539px;
-    height: 91px;
-}
-
-.features .features-leaf /* третье преимущество */ {
-    margin: 0;
-    padding: 0;
-    width: 484px;
-    height: 64px;
-    margin-left: 63px;
-    margin-top: 20px;
-}
-
-.features .features-thermometer-list /* картинка термометра */ {
-    background-image: url("../img/thermometer.png");
-    background-repeat: no-repeat;
-    background-position: 11px 6px;
-    width: 539px;
-    height: 91px;
-}
-
-.features .features-thermometer /* четвертое преимущество */ {
-    margin: 0;
-    padding: 0;
-    width: 484px;
-    height: 64px;
-    margin-left: 63px;
-    margin-top: 20px;
-}
-
-.features .features-list li {
-    width: 560px;
-}
-
-.features-title {
+    padding-top: 24px;
+    padding-left: 21px;
     width: 1146px;
     margin: 0 auto;
 }
 
-.features li{
-   font-size: 16px;
-   line-height: 22px;
-   color: #323232;
-   font-weight: 400;  
+.features-list /* флекс для блока с преимуществами */ {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    
+    margin: 0 17px;
+    padding: 0;
+    list-style: none;
 }
 
+.element {
+    position: relative;
+    width: 484px;
+    min-height: 60px;
+    padding-top: 7px;
+    padding-left: 60px;
+}
 
+.features-ice-cream::before /* картинка с мороженкой */ {
+    content: "";
+    position: absolute;  
+    width: 49px;
+    height: 49px;    
+    background-image: url("../img/small_ice_cream.png");
+    background-repeat: no-repeat;    
+    top: 9px;
+    left: 4px;
+}
 
+.features-cow::before /* картинка с коровой */ {
+    content: "";
+    position: absolute;  
+    width: 49px;
+    height: 49px;    
+    background-image: url("../img/cow.png");
+    background-repeat: no-repeat;    
+    top: 9px;
+    left: 2px;
+}
+
+.features-leaf::before /* картинка с листиком */ {
+    content: "";
+    position: absolute;  
+    width: 49px;
+    height: 49px;    
+    background-image: url("../img/leaf.png");
+    background-repeat: no-repeat;    
+    top: 2px;
+    left: 4px;
+}
+
+.features-thermometer::before /* картинка с термометром */ {
+    content: "";
+    position: absolute;  
+    width: 49px;
+    height: 49px;    
+    background-image: url("../img/thermometer.png");
+    background-repeat: no-repeat;    
+    top: 2px;
+    left: 1px;
+}
+
+.features-leaf, 
+.features-thermometer {
+   margin-top: 9px;
+}
+
+/* Блог и подписка */
 
 .blog-subscription {
+    width: 1146px;
+    min-height: 222px;
+    
     display: flex;
+    flex-wrap: wrap; 
     justify-content: space-between;
-    align-items: center;
-    padding: 0 27px;
-    margin-bottom: 40px;
-    height: 222px;    
-    box-sizing: inherit;    
+    align-items: flex-start;
+    
+    margin: 0;
+    margin-left: 21px;
+    padding: 0;
 }
 
-.blog,
-.subscription {
-    margin: auto;
+.blog-subscription-wrap {
     width: 560px;
-    height: 222px;
+    min-height: 222px;
+    margin: auto;
+}
+
+.blog-wrap {
+    background-image: url("../img/strawberry_background_.jpg");
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 560px;
+    height: 220px;
+}
+
+.blog {
+    padding: 11px 260px 0 18px;
+}
+
+.blog-link {
+    margin-top: -10px;
+}
+
+.blog a {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #323232;
+}
+
+.blog a:hover {
+    color: #e84d37;
+}
+
+.subscription-background {
+    background-image: url("../img/post_background.jpg");
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 560px;
+    height: 220px;
+    margin-left: 13px;
+    margin-top: -11px;
+}
+
+.subscription-title {
+    display: block;
+    padding-top: 35px;
+    padding-left: 26px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #5a5a5a;
+}
+
+.subscription {
+    width:  515px;
+    min-height: 53px;
+        margin-left: 26px;
+    margin-top: 36px;
+}
+
+.subscription input[type=email] {
+    margin-bottom: 0;
+    margin-right: 0;
+        min-width: 364px;
+    height: 39px;
+    border-radius: 5px;
+}
+
+.subscription button[type=submit] {
+    width: 129px;
+    height: 47px;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    vertical-align: top;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+    background: #f26843;
+    background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+    margin-top: -2px;
+}
+
+.subscription button[type=submit]:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.subscription button[type=submit]:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .map-contacts {
-    margin: 0 auto;
-    margin-bottom: 18px;
-    height: 433px;    
-    box-sizing: inherit;  
-    background-image: url("../img/map.png");
+    display: block;
     position: relative;
+    height: 430px;
+    background-image: url("../img/map.png");
+    background-repeat: no-repeat;
+    background-position: 27% 0%;
+    margin-top: 39px;
+    box-sizing: inherit;
 }
 
 .contacts {
-    width: 308px;
-    height: 302px;
-    float: right;
-    background-color: #fffffe;
-    border-radius: 30px;
     position: absolute;
+    top: 50%;
     right: 27px;
-    top: 69px;
+    width: 302px;
+    color: #323232;
+    background-color: #fffffe;
+    border-radius: 15px;
+    text-align: left;
+    transform: translateY(-49%);
+    height: 306px;    
 }
 
+.contacts .button-contacts {
+    width: 252px;
+    height: 46px;
+    
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    vertical-align: top;
+    text-decoration: none;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+    background: #f26843;
+    background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    border-radius: 50px;
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+    border: none;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-top: 21px;
+    padding-top: 10px;
+}
+
+.button-contacts:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button-contacts:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.map {
+    content: "";
+    position: absolute;  
+    width: 218px;
+    height: 142px;    
+    background-repeat: no-repeat;  
+    background-image: url("../img/ice_cream_on_map_.png");
+    top: 141px;
+    left: 266px;
+}
+
+.contact-adres {
+    margin: 28px 0 0 25px;
+    padding: 0;
+    width: 222px;
+    display: block;
+    min-height: 88px;
+}
+
+.contacts p, 
+.contacts b, 
+.contacts a {
+    margin: 0;
+    padding: 0;
+}
+
+.contacts b {
+    margin-bottom: 10px;
+}
+
+.contast-phone {
+    margin: 20px 0 0 25px;
+    padding: 0;
+    width: 222px;
+    display: block;
+    min-height: 71px;
+}
+
+/*подвал */
+
 .main-footer /* флекс для подвала */ {
-    display: flex;    
-    margin-bottom: 26px;
-    height: 83px;    
-    box-sizing: inherit;    
+    display: flex;  
+    min-height: 83px;    
+    box-sizing: inherit; 
+    margin-top: 16px;
 }
 
 .footer-social {
-    margin: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.social-link {    
+    min-width: 187px;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 21px auto auto -13px;
+}
+
+.social-button-tw {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-image: url("../img/tviter_.png");
+}
+
+.social-button-inst {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-image: url("../img/instagramm.png");
+}
+
+.social-button-fb {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-image: url("../img/facebook.png");
+}
+
+.social-button-vk {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-image: url("../img/v_kontakt.png");
 }
 
 .about-us {
-    margin: auto;
+    margin: 16px 0 0 194px;
+    padding: 0;
+}
+
+.about-us-list {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 328px;
+    height: 38px;
+    justify-content: flex-start;
+}
+
+.about-us-list li {
+    flex-basis: 50%;
+}
+
+.heart::before {
+    content: "";
+    position: absolute;  
+    width: 15px;
+    height: 13px;    
+    background-image: url("../img/heart.png");
+    background-repeat: no-repeat;  
+    top: 5px;
+    left: 18px;
+    
 }
 
 .developer {
-    margin: auto;
-}
-
-.breadcrumbs-list {
-    display: flex;
-    width: 224px;
-    justify-content: space-between
-}
-
-.filter /*сетка на флексах для фильтров в каталоге*/{
-    display: flex;
-    width: 864px;
-    height: 136px;
-    flex-wrap: wrap;
-    margin: 0;
-}
-
-.filter div:nth-child(1) /*сортировка*/ {
-    width: 195px;
-    height: 66px;
-    margin: 0;
-    padding: 0;    
-}
-
-.filter div:nth-child(2) /*цена*/ {
-    width: 224px;
-    height: 66px;
-}
-
-.filter div:nth-child(3) /*жирность*/ {
-    width: 422px;
-    height: 66px;
-    margin: 0;
-    padding: 0;
-}
-
-.filter-list-fat /*флекс для жирности*/ {
-    display: flex;
-    justify-content: space-between;
-}
-
-.filter div:nth-child(4) /*наполнители*/ {
-    width: 704px;
+    position: relative;
+    width: 192px;
     height: 58px;
-    margin: 0;
+    margin: auto;
+    right: -93px;
+    top: -10px;
+}
+
+.developer-link {
+    position: absolute;
+    background-image: url("../img/logo_htmlacademy_small.png");
+    width: 108px;
+    height: 39px;
+}
+
+.developer-title {
+    margin: 41px 0 0 0;
     padding: 0;
-}
-
-.filter-list-fillers /*флекс для наполнителей*/ {
-    display: flex;
-    justify-content: space-between;
-}
-
-.filter div:nth-child(5) /*кнопка "применить"*/ {
-    width: 150px;
-    height: 41px;
-}
-
-.range-catalog /*флекс для ассортимента на странице каталога*/ {
-    display: flex;
-    justify-content: space-between;
-    width: 1146px;
-    height: 1096px;
-    margin: 0 auto 40px;
-    flex-wrap: wrap;
-    box-sizing: inherit; 
-}
-
-.icecream /*задаем ширину и высоту блока с мороженым (картинка + цена + полпись*/ {
-    width: 267px;
-    height: 329px;
-}
-
-.icecream p,
-.icecream a /* убираем отступы у абзацев и ссылок */ {
-    padding: 0;
-    margin: 0;
-}
-
-.page-list /* флекс для страниц каталога */ {
-    display: flex;
-    width: 203px;
-    height: 36px;
-    justify-content: space-around;
-    margin-left: 955px;
-} 
-
-.footer-social-list /* флекс для соц. сетей */ {
-    display: flex;
-    width: 189px;
-    height: 41px;
-    justify-content: space-between;
-}
-
-.about-us-list /* флекс для ссылок "о нас" */ {
-    display: flex;
-    width: 312px;
-    height: 47px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.developer /* флекс для разработчика */ {
-    display: flex;
-    width: 194px;
-    height: 64px;
-    flex-wrap: wrap;
-    justify-content: space-between;
 }

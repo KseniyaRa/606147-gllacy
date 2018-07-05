@@ -9,6 +9,9 @@
     
   </head>
   <body>
+      <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+      <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+      <input class="visually-hidden" type="radio" id="product-3" name="toggle">
       <header class="main-header">
         <nav class="main-navigation">
             <div class="container">
@@ -56,8 +59,7 @@
                         </li>      
                     </ul>              
         </nav>
-          
-          
+                    
           <div class="header-info">
           <span class="visually-hidden">График работы и контактный телефон</span>
           <p>С 10 до 20, ежедневно</p>
@@ -66,25 +68,25 @@
           
           <div class="slider">
               <span class="visually-hidden">Спецпредложение: вместе вкуснее</span>
-                            <div class="slide1">                   
-                  <p>Крем-брюле и пломбир с малиновым джемом</p>
-                  <div class="button-slider">
-                      <a href="basket.html" class="button-background">Давайте оба!</a>
-                                </div>
-                  <!--<img src="img/ice_cream_1.png" width="1045" height="881">-->
-              </div>
-              <!--<div class="slide2">
-                  <p>Шоколадный пломбир и лимонный сорбет</p>
-                  <a href="basket.html" class="button-background">Давайте оба!</a>
-                  <img src="img/ice_cream_2.png" width="1045" height="881">
-              </div>
-              <div class="slide3">
-                  <p>Пломбир с помадкой и клубничный щербет</p>
-                  <a href="basket.html" class="button-background">Давайте оба!</a>
-                  <img src="img/ice_cream_3.png" width="1045" height="881">
-              </div>-->                
               <div class="slider-controls">
-             </div>
+                  <label for="product-1">Первый</label>
+                  <label for="product-2">Второй</label>
+                  <label for="product-3">Третий</label>
+              </div>
+              <ul class="slider-list"> 
+                  <li class="slider-item slide" id="slide1">
+                      <p class="slide-title">Крем-брюле и пломбир с малиновым джемом</p>
+                      <a class="button slide-button" href="basket.html" >Давайте оба!</a>
+                  </li>
+                  <li class="slider-item slide" id="slide2">
+                      <p class="slide-title">Шоколадный пломбир и лимонный сорбет</p>
+                      <a class="button slide-button" href="basket.html" >Давайте оба!</a>
+                  </li>
+                  <li class="slider-item slide" id="slide3">
+                      <p class="slide-title">Пломбир с помадкой и клубничный щербет</p>
+                      <a class="button slide-button" href="basket.html" >Давайте оба!</a>
+                  </li>
+              </ul>
           </div>
       </header>
       
@@ -111,25 +113,25 @@
       <h2 class="visually-hidden">Ассортимент</h2>
           <div class="icecream icecream-1">
               <img src="img/1_vanilla_ice_cream.jpg" width="267" height="267">
-              <p>310/<span>кг</span></p>
+              <p>310₽<span>/ кг</span></p>
               <a href="vanilla_ice_cream_full.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               <!--<a href="vanilla_ice_cream.html" class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream icecream-2">              
               <img src="img/2_coffee_ice_cream.jpg" width="267" height="267">
-              <p>380/<span>кг</span></p>
+              <p>380₽<span>/ кг</span></p>
               <a href="coffee_ice_cream_full.html">Сливочно-кофейное с кусочками шоколада</a>
               <!--<a href="coffee_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>          
           <div class="icecream icecream-3">
               <img src="img/3_strawberry_ice_cream_.jpg" width="267" height="267">
-              <p>355/<span>кг</span></p>
+              <p>355₽<span>/ кг</span></p>
               <a href="strawberry_ice_cream_full.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
               <!--<a href="strawberry_ice_cream.html"class="button-background">Быстрый просмотр</a>-->
           </div>
           <div class="icecream icecream-4">              
               <img src="img/4_creme_brulee_ice_cream.jpg" width="267" height="267">
-              <p>415/<span>кг</span></p>
+              <p>415₽<span>/ кг</span></p>
               <a href="creme_brulee_ice_cream_full.html">Сливочное крем-брюле с карамельной подливкой</a>
               <!--<a href="creme_brulee_ice_cream.html" class="button-background">Быстрый просмотр</a>-->
           </div>                  
@@ -138,80 +140,93 @@
       <section class="features">
         <h2 class="features-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
         <ul class="features-list">
-          <li class="features-ice-cream-list">
+          <li class="element">
           <p class="features-ice-cream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
           </li>
-          <li class="features-cow-list">
+          <li class="element">
           <p class="features-cow">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>        
           </li>
-          <li class="features-leaf-list">
+          <li class="element">
             <p class="features-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
           </li>
-            <li class="features-thermometer-list">
+            <li class="element">
             <p class="features-thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
             </li>
         </ul> 
       </section>
             
       <div class="blog-subscription">
-          <article class="blog">
-      <h1>Новое в нашем блоге</h1>
-      <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
-      </article>
-
-      <section class="subscription">
-          <h2 class="visually-hidden">Подписка</h2>
-          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form class="subscription">
-              <input type="text" name="e-mail" placeholder="Электронная почта">              
-              <button type="submit" class="button-background">Отправить</button> 
-          </form>
-      </section>
+          <div class="blog-subscription-wrap blog-wrap">
+              <article class="blog">
+                  <h1>Новое в нашем блоге</h1>
+                  <div class="blog-link">
+                      <a href="blog.html">10 способов сервировки фруктовых щербетов к столу</a>
+                  </div>
+              </article>
+          </div>
+          
+          <div class="blog-subscription-wrap">
+              <section class="subscription-background">
+                  <h2 class="visually-hidden">Подписка</h2>
+                  <p class="subscription-title">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+                  <form class="subscription">
+                      <input type="email" name="e-mail" placeholder="Электронная почта">              
+                      <button type="submit" class="button-background">Отправить</button> 
+                  </form>
+              </section>
+          </div>
           </div>
       
           <div class="map-contacts">
               <div class="map">
-              <span class="visually-hidden">Карта: как нас найти</span>
-              <!--<img src="img/map.png" width="1200" height="430" alt="Карта"> -->
-          </div>
-          
-      <section class="contacts">
-          <h1 class="visually-hidden">Контакты</h1>
-          <p>Адрес главного офиса и офлайн-магазина:</p>
-          <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-          <p>Для заказов по телефону:</p>
-          <a href="tel:+781245025258">812 450-25-25</a>
-          <p>(с 10 до 20 ежедневно)</p>
-          <a href="feedback_form.html" class="button-background">Форма обратной связи</a>                 
-      </section>
+                  <span class="visually-hidden">Карта: как нас найти</span>
+                  <!--<img src="img/map.png" width="1200" height="430" alt="Карта"> -->
+              </div>
+              
+              <section class="contacts">
+                  <h1 class="visually-hidden">Контакты</h1>
+                  <div class="contact-adres">
+                      <p>Адрес главного офиса <br>и офлайн-магазина:</p>
+                      <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+                  </div>
+                  <div class="contast-phone">
+                      <p>Для заказов по телефону:</p>
+                      <a href="tel:+781245025258" class="">812 450-25-25</a>
+                      <p>(с 10 до 20 ежедневно)</p>
+                  </div>
+                      
+                  <a href="feedback_form.html" class="button-contacts">Форма обратной связи</a>                 
+              </section>
               </div>
       </main>
       
       <footer class="main-footer">
           <section class="footer-social">
               <h2 class="visually-hidden">Социальные сети</h2>
-              <ul>
-                <li><a class="social-button" href="#">Твитер</a></li>
-                <li><a class="social-button" href="#">Инстаграмм</a></li>
-                <li><a class="social-button" href="#">Фейсбук</a></li>
-                <li><a class="social-button" href="#">В контакте</a></li>
+              <ul class="social-link">
+                <li><a class="social-button-tw" href="http://twitter.com"><span class="visually-hidden">Твитер</span></a></li>
+                <li><a class="social-button-inst" href="https://www.instagram.com"><span class="visually-hidden">Инстаграмм</span></a></li>
+                <li><a class="social-button-fb" href="http://facebook.com"><span class="visually-hidden">Фейсбук</span></a></li>
+                <li><a class="social-button-vk" href="http://vk.com"><span class="visually-hidden">В контакте</span></a></li>
                   </ul>
           </section>
           <section class="about-us">
               <h2 class="visually-hidden">О нас</h2>
-          <ul>
-              <li><a href="for_suppliers.html">Для поставщиков</a></li>
-              <li><a href="about_production.html">О производстве</a></li>
+          <ul class="about-us-list">
+              <li class="heart"><a href="for_suppliers.html">Для поставщиков</a></li>
               <li><a href="our_documents.html">Наши документы</a></li>
+              <li><a href="about_production.html">О производстве</a></li>
               <li><a href="eco_standards.html">Экологические стандарты</a></li>
           </ul>       
           </section>
           <section class="developer">
               <h2 class="visually-hidden">Разработчик</h2>
-          <a href="https://htmlacademy.ru/intensive/htmlcss">html academy</a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="developer-link"><span class="visually-hidden">html academy</span></a>
+              <div class="developer-title">
           <span>Сделано в </span>
               <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
               <span> © 2017</span>
+              </div>
               </section>
       </footer>
       <!--<div class="modal">
